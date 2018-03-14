@@ -9,15 +9,32 @@
     <body ng-app="basicApp">
        
         <div ng-controller="homeController">
-            <input type="text" ng-model="uname" placeholder = "Enter Username">
-            {{uname}}
+                <input type="text" ng-model="uname" placeholder = "Enter Username">
+                {{uname}}
         </div>
+        <br>
+        <div ng-controller="listController">
+            <h1>Lista de Items</h1>
+            <br>
+            <ol>
+                <li ng-repeat="item in items">
+                    {{item}}
+                </li>
+            </ol>
+            <br>
+            <form>
+                <fieldset>
+                    <logone>
+                        Add new
+                    </logone>
+                    <input type="text" ng-model="newItem" placeholder = "item">
+                    <button ng-click="addItem()">Click</button>
+                </fieldset>
 
-        <ol>
-            <li ng-repeat="item in items">
-                {{item}}
-            </li>
-        </ol>
+            </form>
+
+        </div>
+        
         
     </body>
 </html>

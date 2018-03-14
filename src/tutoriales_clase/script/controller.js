@@ -1,9 +1,12 @@
 var app = angular.module('basicApp', []);
 app.controller('homeController', function ($scope){
-    $scope.uname = "Paquiiitooo";
+    $scope.uname = "uname";
 });
 
-function initController ($scope){
+var module= angular.module('listApp',[]);
+var controller = module.controller['listController'];
+
+app.controller('listController', function initController ($scope){
     $scope.items = ['first item'];
     $scope.addItem = function(){
         if($scope.newItem){
@@ -12,4 +15,4 @@ function initController ($scope){
         }
     }
 
-}
+});
