@@ -1,0 +1,42 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+      <ion-buttons end>
+        <button ion-button icon-only (click)="onLoadPaginaPrincipal()">
+            <ion-icon name="home"></ion-icon>
+         </button>
+    </ion-buttons>
+  <ion-title>Hora Libre</ion-title>
+</ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+
+<ion-navbar>
+  <button ion-button icon-end color="secondary" (click)="onLoadTramitesCarta()">
+    Trámites de la carta
+  </button>
+</ion-navbar>
+
+<ion-navbar>
+  <button ion-button icon-end color="secondary" (click)="onLoadEncuesta()">
+    Encuestas
+  </button>
+</ion-navbar>
+    
+<ion-navbar>
+  <button ion-button icon-end color="secondary" (click)="onLoadTodosLosPedidos()">
+    Todos los pedidos
+  </button>
+</ion-navbar>
+      
+<ion-navbar>
+  <button ion-button icon-end color="secondary" (click)="onLoadTablonComentarios()">
+    Tablón de comentarios
+  </button>
+</ion-navbar>    
+
+
+</ion-content>
