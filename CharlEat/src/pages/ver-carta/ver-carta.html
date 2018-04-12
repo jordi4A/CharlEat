@@ -13,22 +13,24 @@
 
 
 <ion-content padding>
+  <ion-list>
+    <button ion-item (click)="onLoadBebidas()">
+      <ion-icon name="beer" item-start color="primary"></ion-icon>
+      <ion-label>Bebidas</ion-label>
+      <ion-icon name="arrow-dropright" item-end color="primary"></ion-icon>
+    </button>
 
-  <ion-navbar>
-      <ion-buttons end>
-          <button ion-button icon-only (click)="onLoadBebidas()">
-              <ion-icon name="cafe"></ion-icon>
-           </button>
-      </ion-buttons>
-      <ion-title>Bebidas</ion-title>
-      </ion-navbar>      
-<ion-navbar>
-    <ion-buttons end>
-        <button ion-button icon-only >
-            <ion-icon name="add"></ion-icon>
-         </button>
-    </ion-buttons>
-    <ion-title>Platos Combinados</ion-title>
-    </ion-navbar>
+    <button ion-item>
+      <ion-icon name="pizza" item-start color="primary"></ion-icon>
+      <ion-label>Platos combinados</ion-label>
+      <ion-icon name="arrow-dropright" item-end color="primary"></ion-icon>
+    </button>
+
+    <button ion-item>
+      <ion-icon name="flame" item-start color="primary"></ion-icon>
+      <ion-label>Promociones</ion-label>
+      <ion-icon name="arrow-dropright" item-end color="primary"></ion-icon>
+    </button>
+  </ion-list>
 
 </ion-content>
