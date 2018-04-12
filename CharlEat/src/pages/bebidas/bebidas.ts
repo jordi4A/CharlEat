@@ -4,7 +4,7 @@ import { IonicPage, NavController, NavParams,AlertController } from 'ionic-angul
 import {NuevoProductoPage, VerProductoPage} from '../pages'
 import { ContactService } from '../../services/contacts.service';
 import { Product } from '../../models/contacto.model';
-import { Observable } from '@firebase/util';
+import { Observable } from 'rxjs/Observable';
 
 /**
  * Generated class for the LibretaPage page.
