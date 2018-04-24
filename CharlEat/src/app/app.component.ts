@@ -3,7 +3,7 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import {BebidasPage, TodoPage} from '../pages/pages'
+import { BebidasPage, MenuPage } from '../pages/pages'
 
 import { HomePage } from '../pages/home/home';
 import { PaginaPrincipalPage } from '../pages/pagina-principal/pagina-principal';
@@ -26,8 +26,7 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Contactos', component: BebidasPage },
-      { title: 'Tareas Pendientes', component: TodoPage },
-      { title: 'Acerca de', component: HomePage}
+      { title: 'Acerca de', component: HomePage }
     ];
 
   }

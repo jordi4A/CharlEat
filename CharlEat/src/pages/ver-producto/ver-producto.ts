@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { Product } from '../../models/contacto.model';
-import { ContactService } from '../../services/contacts.service';
+import { Product } from '../../models/producto.model';
+import { ProductService } from '../../services/producto.service';
 
 /**
  * Generated class for the VerContactoPage page.
@@ -19,27 +19,17 @@ export class VerProductoPage {
 
   product: Product;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private contactService: ContactService) {
-
+  constructor(public navCtrl: NavController, public navParams: NavParams, private productService: ProductService) {
     this.product = this.navParams.data;
-    console.log(this.product.key);
-    
   }
 
   onUpdateProduct(value: Product){
-
-    this.contactService.updateProduct(value);
+    this.productService.updateProduct(value);
     this.navCtrl.pop();
-
   }
 
   onRemoveProduct(value: Product){
-
-    this.contactService.removeProduct(value);
+    this.productService.removeProduct(value);
     this.navCtrl.pop();
-
   }
-
-  
-
 }

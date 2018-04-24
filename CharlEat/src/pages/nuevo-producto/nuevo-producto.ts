@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { ContactService } from '../../services/contacts.service';
-import { Product } from '../../models/contacto.model';
+import { ProductService } from '../../services/producto.service';
+import { Product } from '../../models/producto.model';
 
 
 
@@ -21,19 +21,19 @@ export class NuevoProductoPage {
 
 
 
-  constructor(public navCtrl: NavController, private contactService: ContactService) {
+  constructor(public navCtrl: NavController, private productService: ProductService) {
 
-   
+
   }
 
   onAddProduct(value: Product){
 
-    this.contactService.addProduct(value).then(ref => {
+    this.productService.addProduct(value).then(ref => {
       console.log(ref.key);
     });
     this.navCtrl.pop();
   }
 
- 
+
 
 }

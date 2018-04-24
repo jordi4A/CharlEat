@@ -4,21 +4,19 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { BebidasPage, TodoPage,NuevoProductoPage, VerProductoPage } from '../pages/pages';
+import { BebidasPage, NuevoProductoPage, VerProductoPage, MenuPage } from '../pages/pages';
 import { PaginaPrincipalPage } from '../pages/pagina-principal/pagina-principal';
-import { HoraServicioPage} from '../pages/hora-servicio/hora-servicio';
-import { HoraLibrePage} from '../pages/hora-libre/hora-libre';
-import { EncuestaPage} from '../pages/encuesta/encuesta';
-import { RealizarEncuestaPage} from '../pages/realizar-encuesta/realizar-encuesta';
-import { TablonComentariosPage} from '../pages/tablon-comentarios/tablon-comentarios';
-import { TodosLosPedidosPage} from '../pages/todos-los-pedidos/todos-los-pedidos';
-import { VerCartaPage} from '../pages/ver-carta/ver-carta';
-import { VerEncuestaDelDiaPage} from '../pages/ver-encuesta-del-dia/ver-encuesta-del-dia';
+import { HoraServicioPage } from '../pages/hora-servicio/hora-servicio';
+import { HoraLibrePage } from '../pages/hora-libre/hora-libre';
+import { EncuestaPage } from '../pages/encuesta/encuesta';
+import { RealizarEncuestaPage } from '../pages/realizar-encuesta/realizar-encuesta';
+import { TablonComentariosPage } from '../pages/tablon-comentarios/tablon-comentarios';
+import { TodosLosPedidosPage } from '../pages/todos-los-pedidos/todos-los-pedidos';
+import { VerCartaPage } from '../pages/ver-carta/ver-carta';
+import { VerEncuestaDelDiaPage } from '../pages/ver-encuesta-del-dia/ver-encuesta-del-dia';
 
-
-import{ContactService} from '../services/contacts.service';
-import {FIREBASE_CONFIG} from '../app/firebase.credentials';
-
+import { ProductService } from '../services/producto.service';
+import { FIREBASE_CONFIG } from '../app/firebase.credentials';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -30,9 +28,9 @@ import {AngularFireDatabaseModule} from 'angularfire2/database'
     MyApp,
     HomePage,
     BebidasPage,
-    TodoPage,
     NuevoProductoPage,
     VerProductoPage,
+    MenuPage,
     PaginaPrincipalPage,
     HoraLibrePage,
     HoraServicioPage,
@@ -42,7 +40,7 @@ import {AngularFireDatabaseModule} from 'angularfire2/database'
     TodosLosPedidosPage,
     VerCartaPage,
     VerEncuestaDelDiaPage
-    
+
   ],
   imports: [
     BrowserModule,
@@ -55,9 +53,9 @@ import {AngularFireDatabaseModule} from 'angularfire2/database'
     MyApp,
     HomePage,
     BebidasPage,
-    TodoPage,
     NuevoProductoPage,
     VerProductoPage,
+    MenuPage,
     PaginaPrincipalPage,
     HoraLibrePage,
     HoraServicioPage,
@@ -72,7 +70,7 @@ import {AngularFireDatabaseModule} from 'angularfire2/database'
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ContactService
+    ProductService
   ]
 })
 export class AppModule {}
