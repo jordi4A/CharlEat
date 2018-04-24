@@ -1,8 +1,9 @@
+// Base de datos temporal para pruebas en mi propio branch 'jordi'
 export const FIREBASE_CONFIG = {
-    apiKey: "AIzaSyBQ8iI2Vq0chmeMzDarzoQnN_GfSdEyYuY",
-    authDomain: "agendafirebase-288aa.firebaseapp.com",
-    databaseURL: "https://agendafirebase-288aa.firebaseio.com",
-    projectId: "agendafirebase-288aa",
-    storageBucket: "",
-    messagingSenderId: "918099356760"
-  };
+  apiKey: "AIzaSyAq6ZHQayE4FliKJd6ca16RBIdBAthi6oU",
+  authDomain: "charleat-jordi.firebaseapp.com",
+  databaseURL: "https://charleat-jordi.firebaseio.com",
+  projectId: "charleat-jordi",
+  storageBucket: "",
+  messagingSenderId: "1031088591851"
+};
