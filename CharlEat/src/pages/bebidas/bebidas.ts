@@ -46,8 +46,5 @@ export class BebidasPage {
 
   onItemTapped($event, product){
     this.navCtrl.push(VerProductoPage, product);
-
-
   }
-
 }

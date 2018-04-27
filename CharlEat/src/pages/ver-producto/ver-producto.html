@@ -3,7 +3,7 @@
       <button ion-button menuToggle>
         <ion-icon name="menu"></ion-icon>
       </button>
-      <ion-title>Agenda Electrónica</ion-title>
+      <ion-title>Revisar Producto</ion-title>
     </ion-navbar>
 
     <ion-navbar>
@@ -11,23 +11,21 @@
     </ion-navbar>
   </ion-header>
 
-
 <ion-content padding>
+  <ion-item>
+    <ion-label>Nombre</ion-label>
+    <ion-input type="text" [(ngModel)]="product.name" name="name" ngModel required></ion-input>
+  </ion-item>
+  <ion-item>
+    <ion-label>Ingredientes</ion-label>
+    <ion-input type="text" [(ngModel)]="product.description" name="description" ngModel required></ion-input>
+  </ion-item>
 
-
-            <ion-item>
-              <ion-label>Nombre</ion-label>
-              <ion-input type="text" [(ngModel)]="product.name" name="name" ngModel required></ion-input>
-            </ion-item>
-
-            <ion-item>
-              <ion-label>Ingredientes</ion-label>
-              <ion-input type="text" [(ngModel)]="product.description" name="description" ngModel required></ion-input>
-            </ion-item>
-
-         <button ion-button block (click)="onUpdateProduct($event, product)">Modificar</button>
-
-         <button ion-button block (click)="onRemoveProduct($event, product)">Eliminar</button>
-
-
+  <button ion-button block (click)="onUpdateProduct($event)">Modificar</button>
+  <button ion-button block (click)="onRemoveProduct($event)">Eliminar</button>
+  
+  <!-- La página al crearse ya tiene la referencia del producto, no es necesario pasarselo al método. Está autocontenido.
+  <button ion-button block (click)="onUpdateProduct($event, product)">Modificar</button>
+  <button ion-button block (click)="onRemoveProduct($event, product)">Eliminar</button>
+  -->
 </ion-content>

@@ -12,21 +12,18 @@ export class ProductService {
     }
 
     addProduct(value: Product){
-        return this.productosRef.push(value);
+      return this.productosRef.push(value);
     }
 
     updateProduct(value: Product){
-
-        return this.productosRef.update(value.key, value);
+      return this.productosRef.update(value.key, value);
     }
 
     removeProduct(value: Product){
-
-        return this.productosRef.remove(value.key);
+      return this.productosRef.remove(value.key);
     }
 
     getProduct(){
-
-        return this.productosRef;
+      return this.productosRef;
     }
 }

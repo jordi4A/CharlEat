@@ -23,13 +23,27 @@ export class VerProductoPage {
     this.product = this.navParams.data;
   }
 
-  onUpdateProduct(value: Product){
+  onUpdateProduct() {
+    this.productService.updateProduct(this.product);
+    this.navCtrl.pop();
+  }
+
+  onRemoveProduct() {
+    this.productService.removeProduct(this.product);
+    this.navCtrl.pop();
+  }
+
+// El código de abajo no funcionaba bien, al darle a update fallaba y al darle a remove borraba todos los elementos.
+// Esto sucede porque le pasaba un objeto erróneo y la clave de referencia era nula.
+/*
+  onUpdateProduct (value: Product) {
     this.productService.updateProduct(value);
     this.navCtrl.pop();
   }
 
-  onRemoveProduct(value: Product){
+  onRemoveProduct (value: Product) {
     this.productService.removeProduct(value);
     this.navCtrl.pop();
   }
+*/
 }
