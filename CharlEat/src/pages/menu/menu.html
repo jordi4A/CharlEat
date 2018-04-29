@@ -7,31 +7,59 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>menu</ion-title>
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Menú de hoy</ion-title>
   </ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
-  <ion-list>
-    <ion-list-header>
-      Primer plato
-    </ion-list-header>
-    <ion-item class="menu-item">
+  <ion-list radio-group>
+    <ion-list-header class="dishHeader">Primer plato</ion-list-header>
+    <ion-item>
+      <!-- Habrá que cargar el nombre del plato y su identificador dinámicamente aquí abajo -->
       <ion-label>Macarrones</ion-label>
+      <ion-radio value="Identificador"></ion-radio>
     </ion-item>
     <ion-item>
+      <!-- Habrá que cargar el nombre del plato y su identificador dinámicamente aquí abajo -->
       <ion-label>Sopa castellana</ion-label>
-    </ion-item>
+      <ion-radio value="Identificador2"></ion-radio>
+  </ion-item>
+  </ion-list>
 
-    <ion-list-header>
-      Segundo plato
-    </ion-list-header>
+  <ion-list radio-group>
+    <ion-list-header class="dishHeader">Segundo plato</ion-list-header>
     <ion-item>
+      <!-- Habrá que cargar el nombre del plato y su identificador dinámicamente aquí abajo -->
       <ion-label>Pollo asado</ion-label>
+      <ion-radio value="Identificador3"></ion-radio>
     </ion-item>
     <ion-item>
+      <!-- Habrá que cargar el nombre del plato y su identificador dinámicamente aquí abajo -->
       <ion-label>Merluza a la plancha</ion-label>
-    </ion-item>  </ion-list>
+      <ion-radio value="Identificador4"></ion-radio>
+    </ion-item>
+  </ion-list>
+
+  <ion-list>
+    <button ion-item>
+      <ion-label>Elegir postre</ion-label>
+      <ion-icon name="arrow-forward" item-end color="dark" showWhen="android"></ion-icon>
+    </button>
+    <button ion-item>
+      <ion-label>Elegir bebida</ion-label>
+      <ion-icon name="arrow-forward" item-end color="dark" showWhen="android"></ion-icon>
+    </button>
+    <ion-item>
+      <!-- El precio también debería cargarse dinámicamente -->
+      <ion-label item-start id="priceText">Precio: 5.60€</ion-label>
+      <button item-end ion-button icon-end id="submit-button" class="footer-element">Pedir
+      <ion-icon name="arrow-round-forward"></ion-icon>
+    </button>
+    </ion-item>
+  </ion-list>
 </ion-content>
