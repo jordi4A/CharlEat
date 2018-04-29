@@ -16,7 +16,7 @@
 </ion-header>
 
 
-<ion-content padding>
+<ion-content padding  class="dishZone">
   <ion-list radio-group>
     <ion-list-header class="dishHeader">Primer plato</ion-list-header>
     <ion-item>
@@ -46,14 +46,34 @@
   </ion-list>
 
   <ion-list>
-    <button ion-item>
-      <ion-label>Elegir postre</ion-label>
-      <ion-icon name="arrow-forward" item-end color="dark" showWhen="android"></ion-icon>
-    </button>
-    <button ion-item>
-      <ion-label>Elegir bebida</ion-label>
-      <ion-icon name="arrow-forward" item-end color="dark" showWhen="android"></ion-icon>
-    </button>
+    <ion-item>
+      <ion-label>Elige un postre:</ion-label>
+      <!-- Lo de aquó abajo también tiene que cargarse dinámicamente -->
+      <ion-select [(ngModel)]="myParam" multiple="false">
+        <ion-option value="flan">Flan</ion-option>
+        <ion-option value="yogur">Yogur</ion-option>
+        <ion-option value="natilla">Natilla</ion-option>
+        <ion-option value="fruta">Fruta</ion-option>
+        <ion-option value="tarta">Tarta</ion-option>
+      </ion-select>
+    </ion-item>
+    <ion-item>
+      <ion-label>Elige una bebida:</ion-label>
+      <!-- Lo de aquó abajo también tiene que cargarse dinámicamente -->
+      <ion-select [(ngModel)]="myParam2" multiple="false">
+        <ion-option value="cola">Coca-Cola</ion-option>
+        <ion-option value="agua">Agua</ion-option>
+        <ion-option value="fanta">Fanta</ion-option>
+        <ion-option value="zumo">Zumo</ion-option>
+        <ion-option value="burn">Burn</ion-option>
+      </ion-select>
+    </ion-item>
+  </ion-list>
+  <ion-list>
+    <ion-item>
+    <ion-label>Seleccionar hora de recogida: </ion-label>
+    <ion-datetime displayFormat="HH:mm" [(ngModel)]="tokyoTime"></ion-datetime>
+    </ion-item>
     <ion-item>
       <!-- El precio también debería cargarse dinámicamente -->
       <ion-label item-start id="priceText">Precio: 5.60€</ion-label>
