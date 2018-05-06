@@ -1,0 +1,28 @@
+page-menu {
+  ion-content {
+    font-family: sans-serif;
+  }
+  .dishHeader {
+    font-size: 1.2em;
+    margin-bottom: 0px;
+  }
+  #priceText {
+    font-size: 1.2em;
+    height: 100%;
+    vertical-align: middle;
+  }
+  #submit-button {
+    font-size: 1.5em;
+    height: 2em;
+  }
+  ion-list {
+    border-style: dashed;
+    border-width: 1px;
+    border-radius: 5px;
+    border-color: color($colors, primary, base);
+  }
+  .dishZone {
+    //background-color: yellow;
+    background-color: #4682B4;
+  }
+}

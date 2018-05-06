@@ -23,6 +23,7 @@ export class HoraServicioPage {
   }
   onLoadPaginaPrincipal() {
     // Reset the content nav to have just this page
-    this.navCtrl.push(PaginaPrincipalPage);
+    //this.navCtrl.push(PaginaPrincipalPage);
+    this.navCtrl.setRoot(PaginaPrincipalPage);
   }
 }

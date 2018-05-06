@@ -22,11 +22,11 @@
 
   <ion-list>
     <button ion-item *ngFor="let product of products$ | async" (click)="onItemTapped($event, product)">
-     <p><strong>Nombre: </strong>{{product.nombre}}</p> 
-     <p><strong>Ingredientes: </strong>{{product.organizacion}}</p> 
+     <p><strong>Nombre: </strong>{{product.name}}</p>
+     <p><strong>Descripción: </strong>{{product.description}}</p> 
 
     </button>
-    
+
   </ion-list>
 
 </ion-content>

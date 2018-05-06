@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams,AlertController } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 
-import {NuevoProductoPage, VerProductoPage} from '../pages'
-import { ContactService } from '../../services/contacts.service';
-import { Product } from '../../models/contacto.model';
-import { Observable } from '@firebase/util';
+import { NuevoProductoPage, VerProductoPage } from '../pages';
+import { ProductService } from '../../services/producto.service';
+import { Product } from '../../models/producto.model';
+import { Observable } from 'rxjs/Observable';
 
 /**
  * Generated class for the LibretaPage page.
@@ -22,25 +22,19 @@ export class BebidasPage {
 
   products$: Observable<Product[]>;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private ContactService: ContactService, private alertCtrl: AlertController) {
-    
+  constructor(public navCtrl: NavController, public navParams: NavParams, private productService: ProductService, private alertCtrl: AlertController) {
   }
 
-  ionViewWillEnter(){
-
-   //this.contacts=this.ContactService.getContacts();
-
-   this.products$ = this.ContactService
+  ionViewWillEnter() {
+   this.products$ = this.productService
      .getProduct()  //Retorna la DB
      .snapshotChanges() //retorna los cambios en la DB (key and value)
      .map(
-
        changes => {
          return changes.map(c=> ({
            key: c.payload.key, ...c.payload.val()
          }));
-       }); 
-    
+       });
   }
 
   onLoadNewPage() {
@@ -50,8 +44,5 @@ export class BebidasPage {
 
   onItemTapped($event, product){
     this.navCtrl.push(VerProductoPage, product);
-   
-
   }
-
 }

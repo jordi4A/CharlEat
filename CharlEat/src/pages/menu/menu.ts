@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 /**
- * Generated class for the TodoPage page.
+ * Generated class for the MenuPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -10,16 +10,16 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 @IonicPage()
 @Component({
-  selector: 'page-todo',
-  templateUrl: 'todo.html',
+  selector: 'page-menu',
+  templateUrl: 'menu.html',
 })
-export class TodoPage {
+export class MenuPage {
 
   constructor(public navCtrl: NavController, public navParams: NavParams) {
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad TodoPage');
+    console.log('ionViewDidLoad MenuPage');
   }
 
 }
