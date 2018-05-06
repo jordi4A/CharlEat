@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { VerCartaPage, EncuestaPage,  TodosLosPedidosPage, TablonComentariosPage} from '../pages'
+
 /**
  * Generated class for the PaginaPrincipalPage page.
  *

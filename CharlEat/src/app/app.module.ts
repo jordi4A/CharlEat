@@ -17,6 +17,10 @@ import { VerEncuestaDelDiaPage } from '../pages/ver-encuesta-del-dia/ver-encuest
 import { VerCategoriaPage } from '../pages/ver-categoria/ver-categoria';
 import { MandarAvisoPage } from '../pages/mandar-aviso/mandar-aviso';
 
+// Páginas del usuario
+import { PrincipalUsuarioPage } from '../pages/principal-usuario/principal-usuario';
+import { VerMenuUsuarioPage} from '../pages/ver-menu-usuario/ver-menu-usuario';
+
 import { ProductService } from '../services/producto.service';
 import { CategoryService } from '../services/categoria.service';
 import { AvisosService } from '../services/avisos.service';
@@ -45,8 +49,9 @@ import {AngularFireDatabaseModule} from 'angularfire2/database'
     VerCartaPage,
     VerEncuestaDelDiaPage,
     VerCategoriaPage,
+    PrincipalUsuarioPage,
+    VerMenuUsuarioPage,
     MandarAvisoPage
-
   ],
   imports: [
     BrowserModule,
@@ -72,6 +77,8 @@ import {AngularFireDatabaseModule} from 'angularfire2/database'
     VerCartaPage,
     VerEncuestaDelDiaPage,
     VerCategoriaPage,
+    PrincipalUsuarioPage,    
+    VerMenuUsuarioPage,
     MandarAvisoPage
   ],
   providers: [

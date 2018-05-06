@@ -2,7 +2,9 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {BebidasPage} from '../bebidas/bebidas';
 import { MenuPage } from '../menu/menu';
-import {PaginaPrincipalPage} from '../pagina-principal/pagina-principal';
+//import {PaginaPrincipalPage} from '../pagina-principal/pagina-principal';
+import { VerMenuUsuarioPage } from '../ver-menu-usuario/ver-menu-usuario';
+import { PrincipalUsuarioPage} from '../principal-usuario/principal-usuario';
 
 import { VerCategoriaPage } from '../ver-categoria/ver-categoria';
 import { CategoryService } from '../../services/categoria.service';
@@ -40,9 +42,8 @@ export class VerCartaPage {
         });
   }
   onLoadPaginaPrincipal(){
-    // Reset the content nav to have just this page
-    //this.navCtrl.push(PaginaPrincipalPage);
-    this.navCtrl.setRoot(PaginaPrincipalPage);  // De este modo se reinicia la barra de arriba
+    //this.navCtrl.setRoot(PaginaPrincipalPage);  // De este modo se reinicia la barra de arriba
+    this.navCtrl.setRoot(PrincipalUsuarioPage);
   }
   onLoadBebidas() {
     // Reset the content nav to have just this page
@@ -50,7 +51,9 @@ export class VerCartaPage {
   }
   onLoadMenu() {
     // Reset the content nav to have just this page
-    this.navCtrl.push(MenuPage);
+    //this.navCtrl.push(MenuPage);
+    this.navCtrl.push(VerMenuUsuarioPage);
+
   }
 
   onItemTapped($event, category) {

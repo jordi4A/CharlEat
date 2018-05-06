@@ -7,14 +7,14 @@ import {VerCartaPage, HoraServicioPage, PaginaPrincipalPage} from '../pages/page
 import { BebidasPage, MenuPage } from '../pages/pages'
 
 
-
 @Component({
   templateUrl: 'app.html'
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = PaginaPrincipalPage;
+  //rootPage: any = PaginaPrincipalPage;
+  rootPage: any = PrincipalUsuarioPage;
 
   pages: Array<{title: string, component: any}>;
 
