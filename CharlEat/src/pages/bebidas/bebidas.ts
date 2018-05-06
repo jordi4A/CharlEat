@@ -27,7 +27,7 @@ export class BebidasPage {
 
   ionViewWillEnter() {
    this.products$ = this.productService
-     .getProduct()  //Retorna la DB
+     .getProduct("")  //Retorna la DB
      .snapshotChanges() //retorna los cambios en la DB (key and value)
      .map(
        changes => {

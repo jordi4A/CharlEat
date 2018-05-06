@@ -5,7 +5,7 @@ import { Product } from "../models/producto.model";
 @Injectable()
 export class ProductService {
 
-    private productosRef = this.db.list<Product>('Productos');
+    private productosRef = this.db.list<Product>('Productos');  // Igual se puede quitar
 
     constructor (private db:AngularFireDatabase) {
 
@@ -26,6 +26,5 @@ export class ProductService {
     getProduct(category: string){
       this.productosRef = this.db.list<Product>('Productos', ref => ref.orderByChild("type").equalTo(category));
       return this.productosRef;
-      //return this.productosRef;
     }
 }
