@@ -1,0 +1,37 @@
+<ion-header>
+    <ion-navbar color="primary">
+      <button ion-button menuToggle>
+        <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Modificar Menu</ion-title>
+    </ion-navbar>
+  
+    <ion-navbar>
+      <ion-title>{{menu.nombre}}</ion-title>
+    </ion-navbar>
+  </ion-header>
+
+
+<ion-content padding>
+
+
+            <ion-item>
+              <ion-label>Nombre</ion-label>
+              <ion-input type="text" [(ngModel)]="menu.nombre" name="nombre" ngModel required></ion-input>
+            </ion-item>
+  
+            <ion-item>
+              <ion-label>Primer Plato</ion-label>
+              <ion-input type="text" [(ngModel)]="menu.primero" name="primero" ngModel required></ion-input>
+            </ion-item>
+            <ion-item>
+                <ion-label>Segundo plato</ion-label>
+                <ion-input type="text" [(ngModel)]="menu.segundo" name="segundo" ngModel required></ion-input>
+              </ion-item>
+         <button ion-button block (click)="onUpdateProduct($event, menu)">Modificar</button>
+
+         <button ion-button block (click)="onRemoveProduct($event, menu)">Eliminar</button>
+ 
+
+</ion-content>
+

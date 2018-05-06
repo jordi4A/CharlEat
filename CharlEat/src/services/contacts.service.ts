@@ -7,12 +7,6 @@ export class ContactService{
 
     private contactsRef=this.db.list<Product>('AgendaFirebase');
 
-   // private contacts: Contacto []=[{
-     //       "nombre":"Andres",
-       //     "organizacion":"UC3M",
-         //   "movil":"666666666",
-           // "correo":"andres@example.com"}];
-
     constructor(private db:AngularFireDatabase){
 
     }

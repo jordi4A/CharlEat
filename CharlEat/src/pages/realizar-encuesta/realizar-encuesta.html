@@ -7,12 +7,30 @@
 <ion-header>
 
   <ion-navbar>
-    <ion-title>RealizarEncuesta</ion-title>
+    <ion-title>Menús de la encuesta</ion-title>
   </ion-navbar>
-
+  <ion-navbar>
+      <ion-buttons end>
+          <button ion-button icon-only (click)="onLoadNewPage()">
+              <ion-icon name="add"></ion-icon>
+           </button>
+      </ion-buttons>
+      <ion-title>Añadir un menú a la encuesta</ion-title>
+      </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
+    <ion-list>
+        <button ion-item *ngFor="let menu of menus$ | async" (click)="onItemTapped($event, menu)">
+         <p><strong>Nombre: </strong>{{menu.nombre}}</p> 
+         <p><strong>Primer Plato: </strong>{{menu.primero}}</p> 
+         <p><strong>Segundo Plato: </strong>{{menu.segundo}}</p> 
+        </button>
+        
+      </ion-list>
 
+      <button class="button" (click)="crearGrafico()" >REALIZAR ENCUESTA </button>
+
+      
 </ion-content>
