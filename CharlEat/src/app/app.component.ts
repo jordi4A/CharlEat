@@ -4,6 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import {VerCartaPage, HoraServicioPage, PaginaPrincipalPage} from '../pages/pages'
+import { BebidasPage, MenuPage } from '../pages/pages'
 
 
 
@@ -24,7 +25,8 @@ export class MyApp {
     this.pages = [
       { title: 'Ver Carta', component: VerCartaPage },
       { title: 'Hora de Servicio', component: HoraServicioPage },
-      { title: 'Acerca de', component: PaginaPrincipalPage}
+      { title: 'Acerca de', component: PaginaPrincipalPage},
+      { title: 'Bebidas', component: BebidasPage }
     ];
 
   }
