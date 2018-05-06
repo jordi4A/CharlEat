@@ -3,12 +3,8 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
+import {VerCartaPage, HoraServicioPage, PaginaPrincipalPage} from '../pages/pages'
 import { BebidasPage, MenuPage } from '../pages/pages'
-
-import { HomePage } from '../pages/home/home';
-import { PrincipalUsuarioPage } from '../pages/principal-usuario/principal-usuario';
-import { PaginaPrincipalPage } from '../pages/pagina-principal/pagina-principal';
-import { VerCartaPage } from '../pages/ver-carta/ver-carta';
 
 
 @Component({
@@ -27,8 +23,10 @@ export class MyApp {
 
     // used for an example of ngFor and navigation
     this.pages = [
-      { title: 'Bebidas', component: BebidasPage },
-      { title: 'Home', component: HomePage }
+      { title: 'Ver Carta', component: VerCartaPage },
+      { title: 'Hora de Servicio', component: HoraServicioPage },
+      { title: 'Acerca de', component: PaginaPrincipalPage},
+      { title: 'Bebidas', component: BebidasPage }
     ];
 
   }

@@ -15,6 +15,7 @@ import { TodosLosPedidosPage } from '../pages/todos-los-pedidos/todos-los-pedido
 import { VerCartaPage } from '../pages/ver-carta/ver-carta';
 import { VerEncuestaDelDiaPage } from '../pages/ver-encuesta-del-dia/ver-encuesta-del-dia';
 import { VerCategoriaPage } from '../pages/ver-categoria/ver-categoria';
+import { MandarAvisoPage } from '../pages/mandar-aviso/mandar-aviso';
 
 // Páginas del usuario
 import { PrincipalUsuarioPage } from '../pages/principal-usuario/principal-usuario';
@@ -22,6 +23,7 @@ import { VerMenuUsuarioPage} from '../pages/ver-menu-usuario/ver-menu-usuario';
 
 import { ProductService } from '../services/producto.service';
 import { CategoryService } from '../services/categoria.service';
+import { AvisosService } from '../services/avisos.service';
 import { FIREBASE_CONFIG } from '../app/firebase.credentials';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -48,7 +50,8 @@ import {AngularFireDatabaseModule} from 'angularfire2/database'
     VerEncuestaDelDiaPage,
     VerCategoriaPage,
     PrincipalUsuarioPage,
-    VerMenuUsuarioPage
+    VerMenuUsuarioPage,
+    MandarAvisoPage
   ],
   imports: [
     BrowserModule,
@@ -75,14 +78,16 @@ import {AngularFireDatabaseModule} from 'angularfire2/database'
     VerEncuestaDelDiaPage,
     VerCategoriaPage,
     PrincipalUsuarioPage,    
-    VerMenuUsuarioPage
+    VerMenuUsuarioPage,
+    MandarAvisoPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ProductService,
-    CategoryService
+    CategoryService,
+    AvisosService
   ]
 })
 export class AppModule {}
