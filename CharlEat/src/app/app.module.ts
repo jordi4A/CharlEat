@@ -4,7 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { BebidasPage, NuevoProductoPage, VerProductoPage, MenuPage, LoginPage } from '../pages/pages';
+import { BebidasPage, NuevoProductoPage, VerProductoPage, MenuPage, LoginPage, NuevoMenuPage, ModificarMenuPage } from '../pages/pages';
 import { PaginaPrincipalPage } from '../pages/pagina-principal/pagina-principal';
 import { HoraServicioPage } from '../pages/hora-servicio/hora-servicio';
 import { HoraLibrePage } from '../pages/hora-libre/hora-libre';
@@ -31,6 +31,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import {AngularFireModule} from 'angularfire2';
 import {AngularFireDatabaseModule} from 'angularfire2/database'
 
+//Graficos
+import {ChartsModule} from 'ng2-charts'
+
 @NgModule({
   declarations: [
     MyApp,
@@ -52,13 +55,16 @@ import {AngularFireDatabaseModule} from 'angularfire2/database'
     PrincipalUsuarioPage,
     VerMenuUsuarioPage,
     MandarAvisoPage,
-    LoginPage
+    LoginPage,
+    NuevoMenuPage,
+    ModificarMenuPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    ChartsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -81,7 +87,9 @@ import {AngularFireDatabaseModule} from 'angularfire2/database'
     PrincipalUsuarioPage,    
     VerMenuUsuarioPage,
     MandarAvisoPage,
-    LoginPage
+    LoginPage,
+    NuevoMenuPage,
+    ModificarMenuPage
   ],
   providers: [
     StatusBar,
