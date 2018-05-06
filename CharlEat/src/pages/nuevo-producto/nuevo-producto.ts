@@ -2,7 +2,9 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { ProductService } from '../../services/producto.service';
 import { Product } from '../../models/producto.model';
-
+import { CategoryService } from '../../services/categoria.service';
+import { Category } from '../../models/categoria.model';
+import { Observable } from 'rxjs/Observable';
 
 
 /**
@@ -19,11 +21,18 @@ import { Product } from '../../models/producto.model';
 })
 export class NuevoProductoPage {
 
+  categories$: Observable<Category[]>;
 
-
-  constructor(public navCtrl: NavController, private productService: ProductService) {
-
-
+  constructor(public navCtrl: NavController, private productService: ProductService, categoryService: CategoryService) {
+    this.categories$ = categoryService
+      .getProduct()  //Retorna la DB
+      .snapshotChanges() //retorna los cambios en la DB (key and value)
+      .map(
+        changes => {
+          return changes.map(c=> ({
+            key: c.payload.key, ...c.payload.val()
+          }));
+        });
   }
 
   onAddProduct(value: Product){

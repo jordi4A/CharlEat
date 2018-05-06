@@ -14,8 +14,10 @@ import { TablonComentariosPage } from '../pages/tablon-comentarios/tablon-coment
 import { TodosLosPedidosPage } from '../pages/todos-los-pedidos/todos-los-pedidos';
 import { VerCartaPage } from '../pages/ver-carta/ver-carta';
 import { VerEncuestaDelDiaPage } from '../pages/ver-encuesta-del-dia/ver-encuesta-del-dia';
+import { VerCategoriaPage } from '../pages/ver-categoria/ver-categoria';
 
 import { ProductService } from '../services/producto.service';
+import { CategoryService } from '../services/categoria.service';
 import { FIREBASE_CONFIG } from '../app/firebase.credentials';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -39,7 +41,8 @@ import {AngularFireDatabaseModule} from 'angularfire2/database'
     TablonComentariosPage,
     TodosLosPedidosPage,
     VerCartaPage,
-    VerEncuestaDelDiaPage
+    VerEncuestaDelDiaPage,
+    VerCategoriaPage
 
   ],
   imports: [
@@ -64,13 +67,15 @@ import {AngularFireDatabaseModule} from 'angularfire2/database'
     TablonComentariosPage,
     TodosLosPedidosPage,
     VerCartaPage,
-    VerEncuestaDelDiaPage
+    VerEncuestaDelDiaPage,
+    VerCategoriaPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ProductService
+    ProductService,
+    CategoryService
   ]
 })
 export class AppModule {}

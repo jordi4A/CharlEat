@@ -14,6 +14,18 @@
 
 <ion-content padding>
   <ion-list>
+    <button ion-item (click)="onLoadMenu()">
+      <ion-icon name="restaurant" item-start color="primary"></ion-icon>
+      <ion-label>Menú</ion-label>
+      <ion-icon name="arrow-dropright" item-end color="dark" showWhen="android"></ion-icon>
+    </button>
+
+    <button ion-item *ngFor="let category of categories$ | async" (click)="onItemTapped($event, category)">-->
+      <ion-icon name="{{ category.icon }}" item-start color="primary"></ion-icon>
+      <ion-label>{{ category.nombre }}</ion-label>
+      <ion-icon name="arrow-dropright" item-end color="dark" showWhen="android"></ion-icon>
+    </button>
+<!--
     <button ion-item>
       <ion-icon name="flame" item-start color="primary"></ion-icon>
       <ion-label>Promociones</ion-label>
@@ -38,7 +50,6 @@
       <ion-icon name="arrow-dropright" item-end color="dark" showWhen="android"></ion-icon>
     </button>
 
-  <!-- working -->
   <button ion-item>
     <ion-icon name="close" item-start color="primary"></ion-icon>
     <ion-label>Hamburguesas</ion-label>
@@ -74,6 +85,6 @@
     <ion-label>Sandwiches</ion-label>
     <ion-icon name="arrow-dropright" item-end color="dark" showWhen="android"></ion-icon>
   </button>
+-->
 </ion-list>
-
 </ion-content>

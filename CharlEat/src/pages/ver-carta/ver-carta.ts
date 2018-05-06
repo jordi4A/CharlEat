@@ -4,6 +4,10 @@ import {BebidasPage} from '../bebidas/bebidas';
 import { MenuPage } from '../menu/menu';
 import {PaginaPrincipalPage} from '../pagina-principal/pagina-principal';
 
+import { VerCategoriaPage } from '../ver-categoria/ver-categoria';
+import { CategoryService } from '../../services/categoria.service';
+import { Category } from '../../models/categoria.model';
+import { Observable } from 'rxjs/Observable';
 /**
  * Generated class for the VerCartaPage page.
  *
@@ -18,11 +22,22 @@ import {PaginaPrincipalPage} from '../pagina-principal/pagina-principal';
 })
 export class VerCartaPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  categories$: Observable<Category[]>;
+
+  constructor(public navCtrl: NavController, public navParams: NavParams, private categoryService: CategoryService) {
+
   }
 
   ionViewDidLoad() {
-    console.log('ionViewDidLoad VerCartaPage');
+    this.categories$ = this.categoryService
+      .getProduct()  //Retorna la DB
+      .snapshotChanges() //retorna los cambios en la DB (key and value)
+      .map(
+        changes => {
+          return changes.map(c=> ({
+            key: c.payload.key, ...c.payload.val()
+          }));
+        });
   }
   onLoadPaginaPrincipal(){
     // Reset the content nav to have just this page
@@ -36,5 +51,9 @@ export class VerCartaPage {
   onLoadMenu() {
     // Reset the content nav to have just this page
     this.navCtrl.push(MenuPage);
+  }
+
+  onItemTapped($event, category) {
+    this.navCtrl.push(VerCategoriaPage, category);
   }
 }

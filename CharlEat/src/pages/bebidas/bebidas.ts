@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 
-import { NuevoProductoPage, VerProductoPage } from '../pages'
+import { NuevoProductoPage, VerProductoPage } from '../pages';
 import { ProductService } from '../../services/producto.service';
 import { Product } from '../../models/producto.model';
 import { Observable } from 'rxjs/Observable';
@@ -23,7 +23,6 @@ export class BebidasPage {
   products$: Observable<Product[]>;
 
   constructor(public navCtrl: NavController, public navParams: NavParams, private productService: ProductService, private alertCtrl: AlertController) {
-
   }
 
   ionViewWillEnter() {
@@ -36,7 +35,6 @@ export class BebidasPage {
            key: c.payload.key, ...c.payload.val()
          }));
        });
-
   }
 
   onLoadNewPage() {
