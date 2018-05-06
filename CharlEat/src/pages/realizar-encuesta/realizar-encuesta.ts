@@ -27,7 +27,7 @@ export class RealizarEncuestaPage {
 
   ionViewWillEnter() {
    this.menus$ = this.menuService
-     .getProduct("")  //Retorna la DB
+     .getMenu("")  //Retorna la DB
      .snapshotChanges() //retorna los cambios en la DB (key and value)
      .map(
        changes => {
