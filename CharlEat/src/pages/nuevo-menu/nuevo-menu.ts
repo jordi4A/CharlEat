@@ -21,7 +21,7 @@ import { Observable } from 'rxjs/Observable';
 export class NuevoMenuPage {
 
   categories$: Observable<Menu[]>;
-
+/*
   constructor(public navCtrl: NavController, private menuService: MenuService, categoryService: CategoryService) {
     this.categories$ = categoryService
       .getProduct()  //Retorna la DB
@@ -41,7 +41,7 @@ export class NuevoMenuPage {
     });
     this.navCtrl.pop();
   }
-
+*/
 
 
 }
