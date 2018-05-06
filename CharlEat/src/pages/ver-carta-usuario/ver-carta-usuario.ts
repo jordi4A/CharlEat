@@ -1,27 +1,21 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { MenuPage } from '../menu/menu';
-import {PaginaPrincipalPage} from '../pagina-principal/pagina-principal';
 import { VerMenuUsuarioPage } from '../ver-menu-usuario/ver-menu-usuario';
+import { PrincipalUsuarioPage} from '../principal-usuario/principal-usuario';
 
-import { NuevoProductoPage, ModificarProductoPage } from '../pages';
-import { VerCategoriaPage } from '../ver-categoria/ver-categoria';
+import { VerCategoriaUsuarioPage } from '../ver-categoria-usuario/ver-categoria-usuario';
 import { CategoryService } from '../../services/categoria.service';
 import { Category } from '../../models/categoria.model';
 import { Observable } from 'rxjs/Observable';
-/**
- * Generated class for the VerCartaPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
 
 @IonicPage()
 @Component({
-  selector: 'page-ver-carta',
-  templateUrl: 'ver-carta.html',
+  selector: 'page-ver-carta-usuario',
+  templateUrl: 'ver-carta-usuario.html',
 })
-export class VerCartaPage {
+export class VerCartaUsuarioPage {
 
   categories$: Observable<Category[]>;
 
@@ -41,16 +35,15 @@ export class VerCartaPage {
         });
   }
   onLoadPaginaPrincipal(){
-    this.navCtrl.setRoot(PaginaPrincipalPage);  // De este modo se reinicia la barra de arriba
+    //this.navCtrl.setRoot(PaginaPrincipalPage);  // De este modo se reinicia la barra de arriba
+    this.navCtrl.setRoot(PrincipalUsuarioPage);
   }
   onLoadMenu() {
+    // Reset the content nav to have just this page
+    //this.navCtrl.push(MenuPage);
     this.navCtrl.push(VerMenuUsuarioPage);
   }
-
   onItemTapped($event, category) {
-    this.navCtrl.push(VerCategoriaPage, category);
-  }
-  onLoadNewProductPage() {
-    this.navCtrl.push(NuevoProductoPage);
+    this.navCtrl.push(VerCategoriaUsuarioPage, category);
   }
 }

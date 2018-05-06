@@ -3,8 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
-import { HomePage } from '../pages/home/home';
-import { BebidasPage, NuevoProductoPage, VerProductoPage, MenuPage, LoginPage } from '../pages/pages';
+import { NuevoProductoPage, ModificarProductoPage, MenuPage, LoginPage } from '../pages/pages';
 import { PaginaPrincipalPage } from '../pages/pagina-principal/pagina-principal';
 import { HoraServicioPage } from '../pages/hora-servicio/hora-servicio';
 import { HoraLibrePage } from '../pages/hora-libre/hora-libre';
@@ -20,6 +19,9 @@ import { MandarAvisoPage } from '../pages/mandar-aviso/mandar-aviso';
 // Páginas del usuario
 import { PrincipalUsuarioPage } from '../pages/principal-usuario/principal-usuario';
 import { VerMenuUsuarioPage} from '../pages/ver-menu-usuario/ver-menu-usuario';
+import { VerCartaUsuarioPage } from '../pages/ver-carta-usuario/ver-carta-usuario';
+import { VerCategoriaUsuarioPage } from '../pages/ver-categoria-usuario/ver-categoria-usuario';
+
 
 import { ProductService } from '../services/producto.service';
 import { CategoryService } from '../services/categoria.service';
@@ -34,10 +36,8 @@ import {AngularFireDatabaseModule} from 'angularfire2/database'
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    BebidasPage,
     NuevoProductoPage,
-    VerProductoPage,
+    ModificarProductoPage,
     MenuPage,
     PaginaPrincipalPage,
     HoraLibrePage,
@@ -47,10 +47,12 @@ import {AngularFireDatabaseModule} from 'angularfire2/database'
     TablonComentariosPage,
     TodosLosPedidosPage,
     VerCartaPage,
+    VerCartaUsuarioPage,
     VerEncuestaDelDiaPage,
     VerCategoriaPage,
     PrincipalUsuarioPage,
     VerMenuUsuarioPage,
+    VerCategoriaUsuarioPage,
     MandarAvisoPage,
     LoginPage
   ],
@@ -63,10 +65,8 @@ import {AngularFireDatabaseModule} from 'angularfire2/database'
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    BebidasPage,
     NuevoProductoPage,
-    VerProductoPage,
+    ModificarProductoPage,
     MenuPage,
     PaginaPrincipalPage,
     HoraLibrePage,
@@ -76,10 +76,12 @@ import {AngularFireDatabaseModule} from 'angularfire2/database'
     TablonComentariosPage,
     TodosLosPedidosPage,
     VerCartaPage,
+    VerCartaUsuarioPage,
     VerEncuestaDelDiaPage,
     VerCategoriaPage,
-    PrincipalUsuarioPage,    
+    PrincipalUsuarioPage,
     VerMenuUsuarioPage,
+    VerCategoriaUsuarioPage,
     MandarAvisoPage,
     LoginPage
   ],

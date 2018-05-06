@@ -32,25 +32,8 @@
     <ion-label>Categoría:</ion-label>
       <ion-select [(ngModel)]="product.type" multiple="false">
         <ion-option *ngFor="let category of categories$ | async" value="{{ category.valor }}">{{ category.nombre }}</ion-option>
-    <!-- Lo de aquó abajo también tiene que cargarse dinámicamente -->
-<!--    <ion-select [(ngModel)]="product.type" multiple="false">
-      <ion-option value="promociones">Promociones</ion-option>
-      <ion-option value="bebidas">Bebidas</ion-option>
-      <ion-option value="combinados">Platos combinados</ion-option>
-      <ion-option value="hamburguesas">Hamburguesas</ion-option>
-      <ion-option value="pasta">Pasta</ion-option>
-      <ion-option value="bollos">Bollos</ion-option>
-      <ion-option value="bocadillos">Bocadillos</ion-option>
-      <ion-option value="pinchos">Pinchos</ion-option>
-      <ion-option value="sandwiches">Sandwiches</ion-option>
--->
     </ion-select>
   </ion-item>
   <button ion-button block (click)="onUpdateProduct($event)">Modificar</button>
   <button ion-button block (click)="onRemoveProduct($event)">Eliminar</button>
-
-  <!-- La página al crearse ya tiene la referencia del producto, no es necesario pasarselo al método. Está autocontenido.
-  <button ion-button block (click)="onUpdateProduct($event, product)">Modificar</button>
-  <button ion-button block (click)="onRemoveProduct($event, product)">Eliminar</button>
-  -->
 </ion-content>

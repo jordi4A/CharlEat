@@ -1,24 +1,18 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-import { ModificarProductoPage } from '../pages';
 import { ProductService } from '../../services/producto.service';
 import { Product } from '../../models/producto.model';
 import { Category } from '../../models/categoria.model';
 import { Observable } from 'rxjs/Observable';
-/**
- * Generated class for the VerCategoríaPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+
 
 @IonicPage()
 @Component({
-  selector: 'page-ver-categoria',
-  templateUrl: 'ver-categoria.html',
+  selector: 'page-ver-categoria-usuario',
+  templateUrl: 'ver-categoria-usuario.html',
 })
-export class VerCategoriaPage {
+export class VerCategoriaUsuarioPage {
 
   products$: Observable<Product[]>;
   category: Category;
@@ -39,7 +33,5 @@ export class VerCategoriaPage {
 
   ionViewDidLoad() {
   }
-  onItemTapped($event, product){
-    this.navCtrl.push(ModificarProductoPage, product);
-  }
+
 }

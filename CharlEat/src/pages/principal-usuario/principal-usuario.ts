@@ -2,7 +2,7 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { VerMenuUsuarioPage} from '../ver-menu-usuario/ver-menu-usuario';
-import {VerCartaPage} from '../ver-carta/ver-carta';
+import {VerCartaUsuarioPage} from '../ver-carta-usuario/ver-carta-usuario';
 
 /**
  * Generated class for the PrincipalUsuarioPage page.
@@ -29,6 +29,6 @@ export class PrincipalUsuarioPage {
     this.navCtrl.push(VerMenuUsuarioPage);
   }
   loadVerCarta() {
-    this.navCtrl.push(VerCartaPage);
+    this.navCtrl.push(VerCartaUsuarioPage);
   }
 }
