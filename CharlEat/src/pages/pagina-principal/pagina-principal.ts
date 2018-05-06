@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { HoraServicioPage} from '../hora-servicio/hora-servicio'
-import { HoraLibrePage} from '../hora-libre/hora-libre'
+import { HoraLibrePage} from '../hora-libre/hora-libre';
 /**
  * Generated class for the PaginaPrincipalPage page.
  *

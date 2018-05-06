@@ -6,6 +6,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import { BebidasPage, MenuPage } from '../pages/pages'
 
 import { HomePage } from '../pages/home/home';
+import { PrincipalUsuarioPage } from '../pages/principal-usuario/principal-usuario';
 import { PaginaPrincipalPage } from '../pages/pagina-principal/pagina-principal';
 import { VerCartaPage } from '../pages/ver-carta/ver-carta';
 
@@ -16,7 +17,8 @@ import { VerCartaPage } from '../pages/ver-carta/ver-carta';
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  rootPage: any = PaginaPrincipalPage;
+  //rootPage: any = PaginaPrincipalPage;
+  rootPage: any = PrincipalUsuarioPage;
 
   pages: Array<{title: string, component: any}>;
 

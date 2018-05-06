@@ -16,6 +16,10 @@ import { VerCartaPage } from '../pages/ver-carta/ver-carta';
 import { VerEncuestaDelDiaPage } from '../pages/ver-encuesta-del-dia/ver-encuesta-del-dia';
 import { VerCategoriaPage } from '../pages/ver-categoria/ver-categoria';
 
+// Páginas del usuario
+import { PrincipalUsuarioPage } from '../pages/principal-usuario/principal-usuario';
+import { VerMenuUsuarioPage} from '../pages/ver-menu-usuario/ver-menu-usuario';
+
 import { ProductService } from '../services/producto.service';
 import { CategoryService } from '../services/categoria.service';
 import { FIREBASE_CONFIG } from '../app/firebase.credentials';
@@ -42,8 +46,9 @@ import {AngularFireDatabaseModule} from 'angularfire2/database'
     TodosLosPedidosPage,
     VerCartaPage,
     VerEncuestaDelDiaPage,
-    VerCategoriaPage
-
+    VerCategoriaPage,
+    PrincipalUsuarioPage,
+    VerMenuUsuarioPage
   ],
   imports: [
     BrowserModule,
@@ -68,7 +73,9 @@ import {AngularFireDatabaseModule} from 'angularfire2/database'
     TodosLosPedidosPage,
     VerCartaPage,
     VerEncuestaDelDiaPage,
-    VerCategoriaPage
+    VerCategoriaPage,
+    PrincipalUsuarioPage,    
+    VerMenuUsuarioPage
   ],
   providers: [
     StatusBar,
