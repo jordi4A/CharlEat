@@ -28,7 +28,6 @@ export class MyApp {
       { title: 'Ver Carta', component: VerCartaPage },
       { title: 'Administrar Pedidos', component: HoraServicioPage },
       { title: 'Acerca de', component: AcercaDePage},
-      { title: 'Hora de Servicio', component: HoraServicioPage }
     ];
 
   }
