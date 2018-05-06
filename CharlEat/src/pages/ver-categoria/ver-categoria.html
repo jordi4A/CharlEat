@@ -14,7 +14,11 @@
 
 
 <ion-content padding>
-  <ion-item *ngFor="let product of products$ | async">
-    <ion-label>{{ product.name }}</ion-label>
+  <ion-item class="listItem" *ngFor="let product of products$ | async">
+    <div class="itemInfo" text-wrap>
+    <span class="itemName">{{ product.name }}</span><br>
+    <span class="itemDescription">{{ product.description }}</span>
+  </div>
+    <span class="itemPrice">{{ product.price }} €</span>
   </ion-item>
 </ion-content>
