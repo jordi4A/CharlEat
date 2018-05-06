@@ -4,7 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { BebidasPage, NuevoProductoPage, VerProductoPage, MenuPage, LoginPage, NuevoMenuPage, ModificarMenuPage } from '../pages/pages';
+import { BebidasPage, NuevoProductoPage, VerProductoPage, MenuPage, LoginPage, NuevoMenuPage, ModificarMenuPage, PedidosAceptadosPage, PedidosEnEsperaPage } from '../pages/pages';
 import { PaginaPrincipalPage } from '../pages/pagina-principal/pagina-principal';
 import { HoraServicioPage } from '../pages/hora-servicio/hora-servicio';
 import { HoraLibrePage } from '../pages/hora-libre/hora-libre';
@@ -33,6 +33,7 @@ import {AngularFireDatabaseModule} from 'angularfire2/database'
 
 //Graficos
 import {ChartsModule} from 'ng2-charts'
+import { AcercaDePage } from '../pages/acerca-de/acerca-de';
 
 @NgModule({
   declarations: [
@@ -57,7 +58,10 @@ import {ChartsModule} from 'ng2-charts'
     MandarAvisoPage,
     LoginPage,
     NuevoMenuPage,
-    ModificarMenuPage
+    ModificarMenuPage,
+    AcercaDePage,
+    PedidosAceptadosPage,
+    PedidosEnEsperaPage
   ],
   imports: [
     BrowserModule,
@@ -89,7 +93,10 @@ import {ChartsModule} from 'ng2-charts'
     MandarAvisoPage,
     LoginPage,
     NuevoMenuPage,
-    ModificarMenuPage
+    ModificarMenuPage,
+    AcercaDePage,
+    PedidosAceptadosPage,
+    PedidosEnEsperaPage
   ],
   providers: [
     StatusBar,

@@ -5,19 +5,30 @@
   Ionic pages and navigation.
 -->
 <ion-header>
-
   <ion-navbar color="primary">
-      <ion-buttons end>
-        <button ion-button icon-only (click)="onLoadPaginaPrincipal()">
-            <ion-icon name="home"></ion-icon>
-         </button>
-    </ion-buttons>
-  <ion-title>Hora Servicio</ion-title>
-</ion-navbar>
-
+    <button ion-button menuToggle>
+      <ion-icon name="menu"></ion-icon>
+    </button>
+    <ion-title>Administración de pedidos</ion-title>
+  </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
-
+  <div class = "imagen">
+    <ion-img  class="grande" src="../assets/imgs/pedidos.png" (click)="onLoadPedidosEspera()"></ion-img>
+  <ion-navbar>
+      <button id = "pedidos" ion-button icon-end color="light" strong = "true" (click)="onLoadPedidos()">
+        Pedidos en espera
+      </button>
+  </ion-navbar>
+</div> 
+<div class = "imagen">
+  <ion-img  class="grande" src="../assets/imgs/pedidos.png" (click)="onLoadPedidosAceptados()"></ion-img>
+<ion-navbar>
+    <button id = "pedidos" ion-button icon-end color="light" strong = "true" (click)="onLoadPedidos()">
+      Pedidos aceptados
+    </button>
+</ion-navbar>
+</div> 
 </ion-content>

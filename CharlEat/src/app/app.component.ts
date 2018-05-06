@@ -3,8 +3,9 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-import {VerCartaPage, HoraServicioPage, PaginaPrincipalPage, PrincipalUsuarioPage, LoginPage, EncuestaPage} from '../pages/pages'
+import {VerCartaPage, HoraServicioPage, PaginaPrincipalPage, PrincipalUsuarioPage, LoginPage, EncuestaPage, ModificarMenuPage, NuevoMenuPage} from '../pages/pages'
 import { BebidasPage, MenuPage } from '../pages/pages'
+import { AcercaDePage } from '../pages/acerca-de/acerca-de';
 
 
 @Component({
@@ -14,7 +15,7 @@ export class MyApp {
   @ViewChild(Nav) nav: Nav;
 
   //rootPage: any = PaginaPrincipalPage;
-  rootPage: any = EncuestaPage;
+  rootPage: any = PaginaPrincipalPage;
 
   pages: Array<{title: string, component: any}>;
 
@@ -24,9 +25,8 @@ export class MyApp {
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Ver Carta', component: VerCartaPage },
-      { title: 'Hora de Servicio', component: HoraServicioPage },
-      { title: 'Acerca de', component: PaginaPrincipalPage},
-      { title: 'Bebidas', component: BebidasPage }
+      { title: 'Administrar Pedidos', component: HoraServicioPage },
+      { title: 'Acerca de', component: AcercaDePage},
     ];
 
   }
