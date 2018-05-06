@@ -4,7 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { BebidasPage, TodoPage,NuevoProductoPage, VerProductoPage, NuevoMenuPage, ModificarMenuPage } from '../pages/pages';
+import { BebidasPage, TodoPage,NuevoProductoPage, VerProductoPage, NuevoMenuPage, ModificarMenuPage, LoginPage } from '../pages/pages';
 import { PaginaPrincipalPage } from '../pages/pagina-principal/pagina-principal';
 import { HoraServicioPage} from '../pages/hora-servicio/hora-servicio';
 import { HoraLibrePage} from '../pages/hora-libre/hora-libre';
@@ -47,7 +47,8 @@ import {ChartsModule} from 'ng2-charts';
     VerCartaPage,
     VerEncuestaDelDiaPage,
     NuevoMenuPage,
-    ModificarMenuPage
+    ModificarMenuPage,
+    LoginPage
     
   ],
   imports: [
@@ -75,7 +76,8 @@ import {ChartsModule} from 'ng2-charts';
     VerCartaPage,
     VerEncuestaDelDiaPage,
     NuevoMenuPage,
-    ModificarMenuPage
+    ModificarMenuPage,
+    LoginPage
   ],
   providers: [
     StatusBar,
