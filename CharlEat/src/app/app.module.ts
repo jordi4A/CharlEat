@@ -33,6 +33,9 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 import {AngularFireModule} from 'angularfire2';
 import {AngularFireDatabaseModule} from 'angularfire2/database'
 
+//Graficos
+import {ChartsModule} from 'ng2-charts'
+
 @NgModule({
   declarations: [
     MyApp,
@@ -54,13 +57,16 @@ import {AngularFireDatabaseModule} from 'angularfire2/database'
     VerMenuUsuarioPage,
     VerCategoriaUsuarioPage,
     MandarAvisoPage,
-    LoginPage
+    LoginPage,
+    NuevoMenuPage,
+    ModificarMenuPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
-    AngularFireDatabaseModule
+    AngularFireDatabaseModule,
+    ChartsModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -83,7 +89,9 @@ import {AngularFireDatabaseModule} from 'angularfire2/database'
     VerMenuUsuarioPage,
     VerCategoriaUsuarioPage,
     MandarAvisoPage,
-    LoginPage
+    LoginPage,
+    NuevoMenuPage,
+    ModificarMenuPage
   ],
   providers: [
     StatusBar,

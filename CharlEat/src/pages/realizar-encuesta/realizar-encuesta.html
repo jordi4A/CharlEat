@@ -1,18 +1,32 @@
-<!--
-  Generated template for the RealizarEncuestaPage page.
-
-  See http://ionicframework.com/docs/components/#navigation for more info on
-  Ionic pages and navigation.
--->
 <ion-header>
 
   <ion-navbar>
-    <ion-title>RealizarEncuesta</ion-title>
+    <ion-title>Menús de la encuesta</ion-title>
   </ion-navbar>
-
+  <ion-navbar>
+      <ion-buttons end>
+          <button ion-button icon-only (click)="onLoadNewPage()">
+              <ion-icon name="add"></ion-icon>
+           </button>
+      </ion-buttons>
+      <ion-title>Añadir un menú a la encuesta</ion-title>
+      </ion-navbar>
 </ion-header>
 
 
 <ion-content padding>
 
+    <ion-list>
+      <button ion-item *ngFor="let product of products$ | async" (click)="onItemTapped($event, product)">
+       <p><strong>Nombre: </strong>{{product.name}}</p>
+       <p><strong>Primer Plato: </strong>{{product.description}}</p> 
+       <p><strong>Segundo Plato: </strong>{{product.description}}</p> 
+
+      </button>
+  
+    </ion-list>
+
+      <button class="button" (click)="crearGrafico()" >REALIZAR ENCUESTA </button>
+
+      
 </ion-content>
