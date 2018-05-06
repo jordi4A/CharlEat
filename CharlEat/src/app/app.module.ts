@@ -4,7 +4,7 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { BebidasPage, NuevoProductoPage, VerProductoPage, MenuPage } from '../pages/pages';
+import { BebidasPage, NuevoProductoPage, VerProductoPage, MenuPage, LoginPage } from '../pages/pages';
 import { PaginaPrincipalPage } from '../pages/pagina-principal/pagina-principal';
 import { HoraServicioPage } from '../pages/hora-servicio/hora-servicio';
 import { HoraLibrePage } from '../pages/hora-libre/hora-libre';
@@ -51,7 +51,8 @@ import {AngularFireDatabaseModule} from 'angularfire2/database'
     VerCategoriaPage,
     PrincipalUsuarioPage,
     VerMenuUsuarioPage,
-    MandarAvisoPage
+    MandarAvisoPage,
+    LoginPage
   ],
   imports: [
     BrowserModule,
@@ -79,7 +80,8 @@ import {AngularFireDatabaseModule} from 'angularfire2/database'
     VerCategoriaPage,
     PrincipalUsuarioPage,    
     VerMenuUsuarioPage,
-    MandarAvisoPage
+    MandarAvisoPage,
+    LoginPage
   ],
   providers: [
     StatusBar,
