@@ -4,21 +4,21 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
-import { BebidasPage, TodoPage,NuevoProductoPage, VerProductoPage, NuevoMenuPage, ModificarMenuPage, LoginPage } from '../pages/pages';
+import { BebidasPage,NuevoProductoPage, VerProductoPage, NuevoMenuPage, ModificarMenuPage, LoginPage, MenuPage } from '../pages/pages';
 import { PaginaPrincipalPage } from '../pages/pagina-principal/pagina-principal';
-import { HoraServicioPage} from '../pages/hora-servicio/hora-servicio';
-import { HoraLibrePage} from '../pages/hora-libre/hora-libre';
-import { EncuestaPage} from '../pages/encuesta/encuesta';
-import { RealizarEncuestaPage} from '../pages/realizar-encuesta/realizar-encuesta';
-import { TablonComentariosPage} from '../pages/tablon-comentarios/tablon-comentarios';
-import { TodosLosPedidosPage} from '../pages/todos-los-pedidos/todos-los-pedidos';
-import { VerCartaPage} from '../pages/ver-carta/ver-carta';
-import { VerEncuestaDelDiaPage} from '../pages/ver-encuesta-del-dia/ver-encuesta-del-dia';
+import { HoraServicioPage } from '../pages/hora-servicio/hora-servicio';
+import { HoraLibrePage } from '../pages/hora-libre/hora-libre';
+import { EncuestaPage } from '../pages/encuesta/encuesta';
+import { RealizarEncuestaPage } from '../pages/realizar-encuesta/realizar-encuesta';
+import { TablonComentariosPage } from '../pages/tablon-comentarios/tablon-comentarios';
+import { TodosLosPedidosPage } from '../pages/todos-los-pedidos/todos-los-pedidos';
+import { VerCartaPage } from '../pages/ver-carta/ver-carta';
+import { VerEncuestaDelDiaPage } from '../pages/ver-encuesta-del-dia/ver-encuesta-del-dia';
+import { VerCategoriaPage } from '../pages/ver-categoria/ver-categoria';
 
-
-import{ContactService} from '../services/contacts.service';
-import {FIREBASE_CONFIG} from '../app/firebase.credentials';
-
+import { ProductService } from '../services/producto.service';
+import { CategoryService } from '../services/categoria.service';
+import { FIREBASE_CONFIG } from '../app/firebase.credentials';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -34,9 +34,9 @@ import {ChartsModule} from 'ng2-charts';
     MyApp,
     HomePage,
     BebidasPage,
-    TodoPage,
     NuevoProductoPage,
     VerProductoPage,
+    MenuPage,
     PaginaPrincipalPage,
     HoraLibrePage,
     HoraServicioPage,
@@ -46,10 +46,10 @@ import {ChartsModule} from 'ng2-charts';
     TodosLosPedidosPage,
     VerCartaPage,
     VerEncuestaDelDiaPage,
+    VerCategoriaPage,
     NuevoMenuPage,
-    ModificarMenuPage,
-    LoginPage
-    
+    ModificarMenuPage
+
   ],
   imports: [
     BrowserModule,
@@ -63,9 +63,9 @@ import {ChartsModule} from 'ng2-charts';
     MyApp,
     HomePage,
     BebidasPage,
-    TodoPage,
     NuevoProductoPage,
     VerProductoPage,
+    MenuPage,
     PaginaPrincipalPage,
     HoraLibrePage,
     HoraServicioPage,
@@ -75,15 +75,16 @@ import {ChartsModule} from 'ng2-charts';
     TodosLosPedidosPage,
     VerCartaPage,
     VerEncuestaDelDiaPage,
+    VerCategoriaPage,
     NuevoMenuPage,
-    ModificarMenuPage,
-    LoginPage
+    ModificarMenuPage
   ],
   providers: [
     StatusBar,
     SplashScreen,
     {provide: ErrorHandler, useClass: IonicErrorHandler},
-    ContactService
+    ProductService,
+    CategoryService
   ]
 })
 export class AppModule {}

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { PaginaPrincipalPage } from '../pages';
+import { PaginaPrincipalPage } from '../pagina-principal/pagina-principal';
 
 /**
  * Generated class for the LoginPage page.

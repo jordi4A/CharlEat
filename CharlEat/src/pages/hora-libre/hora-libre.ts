@@ -28,7 +28,8 @@ export class HoraLibrePage {
 
   onLoadPaginaPrincipal() {
     // Reset the content nav to have just this page
-    this.navCtrl.push(PaginaPrincipalPage);
+    //this.navCtrl.push(PaginaPrincipalPage);
+    this.navCtrl.setRoot(PaginaPrincipalPage);
   }
   onLoadTramitesCarta() {
     // Reset the content nav to have just this page
