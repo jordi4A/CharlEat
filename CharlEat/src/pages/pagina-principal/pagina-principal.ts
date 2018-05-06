@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { HoraServicioPage} from '../hora-servicio/hora-servicio'
-import { HoraLibrePage} from '../hora-libre/hora-libre'
+import { VerCartaPage, EncuestaPage,  TodosLosPedidosPage, TablonComentariosPage} from '../pages'
 /**
  * Generated class for the PaginaPrincipalPage page.
  *
@@ -23,13 +22,25 @@ export class PaginaPrincipalPage {
     console.log('ionViewDidLoad PaginaPrincipalPage');
   }
 
-  onLoadHoraLibre() {
+  onLoadCarta() {
     // Reset the content nav to have just this page
-    this.navCtrl.push(HoraLibrePage);
+    this.navCtrl.push(VerCartaPage);
   }
-  onLoadHoraServicio() {
+  onLoadEncuesta() {
     // Reset the content nav to have just this page
-    this.navCtrl.push(HoraServicioPage);
+    this.navCtrl.push(EncuestaPage);
+  }
+  onLoadMenu() {
+    // Reset the content nav to have just this page
+    this.navCtrl.push(VerCartaPage);
+  }
+  onLoadPedidos() {
+    // Reset the content nav to have just this page
+    this.navCtrl.push(TodosLosPedidosPage);
+  }
+  onLoadTablon() {
+    // Reset the content nav to have just this page
+    this.navCtrl.push(TablonComentariosPage);
   }
 
 
