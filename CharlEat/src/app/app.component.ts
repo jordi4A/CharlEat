@@ -4,8 +4,9 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import {VerCartaPage, HoraServicioPage, PaginaPrincipalPage, PrincipalUsuarioPage, LoginPage, EncuestaPage, ModificarMenuPage, NuevoMenuPage} from '../pages/pages'
-import { BebidasPage, MenuPage } from '../pages/pages'
+import { MenuPage } from '../pages/pages'
 import { AcercaDePage } from '../pages/acerca-de/acerca-de';
+
 
 
 @Component({
@@ -27,6 +28,7 @@ export class MyApp {
       { title: 'Ver Carta', component: VerCartaPage },
       { title: 'Administrar Pedidos', component: HoraServicioPage },
       { title: 'Acerca de', component: AcercaDePage},
+      { title: 'Hora de Servicio', component: HoraServicioPage }
     ];
 
   }

@@ -3,8 +3,12 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
+<<<<<<< HEAD
 import { HomePage } from '../pages/home/home';
 import { BebidasPage, NuevoProductoPage, VerProductoPage, MenuPage, LoginPage, NuevoMenuPage, ModificarMenuPage, PedidosAceptadosPage, PedidosEnEsperaPage } from '../pages/pages';
+=======
+import { NuevoProductoPage, ModificarProductoPage,NuevoMenuPage, ModificarMenuPage, MenuPage, LoginPage } from '../pages/pages';
+>>>>>>> b41cd0a529f2e7105f74f876dc49ddd1873bae50
 import { PaginaPrincipalPage } from '../pages/pagina-principal/pagina-principal';
 import { HoraServicioPage } from '../pages/hora-servicio/hora-servicio';
 import { HoraLibrePage } from '../pages/hora-libre/hora-libre';
@@ -20,6 +24,9 @@ import { MandarAvisoPage } from '../pages/mandar-aviso/mandar-aviso';
 // Páginas del usuario
 import { PrincipalUsuarioPage } from '../pages/principal-usuario/principal-usuario';
 import { VerMenuUsuarioPage} from '../pages/ver-menu-usuario/ver-menu-usuario';
+import { VerCartaUsuarioPage } from '../pages/ver-carta-usuario/ver-carta-usuario';
+import { VerCategoriaUsuarioPage } from '../pages/ver-categoria-usuario/ver-categoria-usuario';
+
 
 import { ProductService } from '../services/producto.service';
 import { CategoryService } from '../services/categoria.service';
@@ -38,10 +45,8 @@ import { AcercaDePage } from '../pages/acerca-de/acerca-de';
 @NgModule({
   declarations: [
     MyApp,
-    HomePage,
-    BebidasPage,
     NuevoProductoPage,
-    VerProductoPage,
+    ModificarProductoPage,
     MenuPage,
     PaginaPrincipalPage,
     HoraLibrePage,
@@ -51,10 +56,12 @@ import { AcercaDePage } from '../pages/acerca-de/acerca-de';
     TablonComentariosPage,
     TodosLosPedidosPage,
     VerCartaPage,
+    VerCartaUsuarioPage,
     VerEncuestaDelDiaPage,
     VerCategoriaPage,
     PrincipalUsuarioPage,
     VerMenuUsuarioPage,
+    VerCategoriaUsuarioPage,
     MandarAvisoPage,
     LoginPage,
     NuevoMenuPage,
@@ -73,10 +80,8 @@ import { AcercaDePage } from '../pages/acerca-de/acerca-de';
   bootstrap: [IonicApp],
   entryComponents: [
     MyApp,
-    HomePage,
-    BebidasPage,
     NuevoProductoPage,
-    VerProductoPage,
+    ModificarProductoPage,
     MenuPage,
     PaginaPrincipalPage,
     HoraLibrePage,
@@ -86,10 +91,12 @@ import { AcercaDePage } from '../pages/acerca-de/acerca-de';
     TablonComentariosPage,
     TodosLosPedidosPage,
     VerCartaPage,
+    VerCartaUsuarioPage,
     VerEncuestaDelDiaPage,
     VerCategoriaPage,
-    PrincipalUsuarioPage,    
+    PrincipalUsuarioPage,
     VerMenuUsuarioPage,
+    VerCategoriaUsuarioPage,
     MandarAvisoPage,
     LoginPage,
     NuevoMenuPage,

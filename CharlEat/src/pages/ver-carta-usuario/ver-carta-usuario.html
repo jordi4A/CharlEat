@@ -1,0 +1,29 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+      <ion-buttons end>
+        <button ion-button icon-only (click)="onLoadPaginaPrincipal()">
+            <ion-icon name="home"></ion-icon>
+         </button>
+    </ion-buttons>
+  <ion-title>Carta</ion-title>
+</ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <button ion-item (click)="onLoadMenu()">
+      <ion-icon name="restaurant" item-start color="primary"></ion-icon>
+      <ion-label>Menú</ion-label>
+      <ion-icon name="arrow-dropright" item-end color="dark" showWhen="android"></ion-icon>
+    </button>
+
+    <button ion-item *ngFor="let category of categories$ | async" (click)="onItemTapped($event, category)">-->
+      <ion-icon name="{{ category.icon }}" item-start color="primary"></ion-icon>
+      <ion-label>{{ category.nombre }}</ion-label>
+      <ion-icon name="arrow-dropright" item-end color="dark" showWhen="android"></ion-icon>
+    </button>
+</ion-list>
+</ion-content>

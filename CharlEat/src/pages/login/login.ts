@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { PaginaPrincipalPage } from '../pagina-principal/pagina-principal';
+import { PrincipalUsuarioPage } from '../principal-usuario/principal-usuario';
 
 /**
  * Generated class for the LoginPage page.
@@ -24,10 +25,10 @@ export class LoginPage {
   }
   onLoadCocina(){
     // Reset the content nav to have just this page
-    this.navCtrl.push(PaginaPrincipalPage);    
+    this.navCtrl.push(PaginaPrincipalPage);
   }
   onLoadCliente() {
     // Reset the content nav to have just this page
-    this.navCtrl.push(PaginaPrincipalPage);
+    this.navCtrl.push(PrincipalUsuarioPage);
   }
 }
