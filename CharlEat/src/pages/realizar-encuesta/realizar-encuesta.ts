@@ -55,6 +55,10 @@ export class RealizarEncuestaPage {
 
    crearGrafico(){
 
+
+
+    
+
    }
 
 }
