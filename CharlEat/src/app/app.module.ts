@@ -3,7 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
-import { NuevoProductoPage, ModificarProductoPage, MenuPage, LoginPage } from '../pages/pages';
+import { NuevoProductoPage, ModificarProductoPage,NuevoMenuPage, ModificarMenuPage, MenuPage, LoginPage } from '../pages/pages';
 import { PaginaPrincipalPage } from '../pages/pagina-principal/pagina-principal';
 import { HoraServicioPage } from '../pages/hora-servicio/hora-servicio';
 import { HoraLibrePage } from '../pages/hora-libre/hora-libre';
