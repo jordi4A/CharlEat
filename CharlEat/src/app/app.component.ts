@@ -4,7 +4,11 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import {VerCartaPage, HoraServicioPage, PaginaPrincipalPage, PrincipalUsuarioPage, 
+<<<<<<< HEAD
   LoginPage, EncuestaPage, ModificarMenuPage, NuevoMenuPage, VerAvisosUsuarioPage, VisualizarAvisoUsuarioPage, RealizarEncuestaPage} from '../pages/pages'
+=======
+  LoginPage, EncuestaPage, ModificarMenuPage, NuevoMenuPage, VerAvisosUsuarioPage, VisualizarAvisoUsuarioPage} from '../pages/pages'
+>>>>>>> 912dc40113ee557c473229cca390d845e8ed2fb4
 import { MenuPage } from '../pages/pages'
 import { AcercaDePage } from '../pages/acerca-de/acerca-de';
 import { VerEncuestaDelDiaPage } from '../pages/ver-encuesta-del-dia/ver-encuesta-del-dia';
@@ -19,7 +23,11 @@ export class MyApp {
 
   //rootPage: any = PaginaPrincipalPage;
   //rootPage: any = EncuestaPage;
+<<<<<<< HEAD
   rootPage: any = VerEncuestaDelDiaPage;
+=======
+  rootPage: any = LoginPage;
+>>>>>>> 912dc40113ee557c473229cca390d845e8ed2fb4
 
   pages: Array<{title: string, component: any}>;
 
