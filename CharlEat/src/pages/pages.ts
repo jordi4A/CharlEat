@@ -22,12 +22,9 @@ export * from '../pages/ver-avisos-usuario/ver-avisos-usuario'
 export * from '../pages/visualizar-aviso-usuario/visualizar-aviso-usuario'
 export * from '../pages/ver-avisos/ver-avisos'
 export * from '../pages/visualizar-aviso/visualizar-aviso'
-<<<<<<< HEAD
 export * from '../pages/votar-encuesta/votar-encuesta'
 export * from '../pages/info/info'
-=======
 export * from '../pages/ver-tablon/ver-tablon'
 export * from '../pages/ver-tablon-usuario/ver-tablon-usuario'
 export * from '../pages/escribir-comentario/escribir-comentario'
 export * from '../pages/votar-encuesta/votar-encuesta'
->>>>>>> a96ac106f76a7baa4b85eca3da323c591846c9df
