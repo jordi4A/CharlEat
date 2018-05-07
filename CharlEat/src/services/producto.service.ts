@@ -23,7 +23,8 @@ export class ProductService {
       return this.productosRef.remove(value.key);
     }
 
-    getProduct(){
+    getProduct(category: string){
+      this.productosRef = this.db.list<Product>('Productos', ref => ref.orderByChild("type").equalTo(category));
       return this.productosRef;
     }
 }
