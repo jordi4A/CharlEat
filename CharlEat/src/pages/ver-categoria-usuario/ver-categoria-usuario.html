@@ -19,6 +19,9 @@
     <span class="itemName">{{ product.name }}</span><br>
     <span class="itemDescription">{{ product.description }}</span>
   </div>
-    <span class="itemPrice">{{ product.price }} €</span>
+  <div class="itemRightElements">
+    <span class="itemPrice">{{ product.price }} €</span><br>
+    <button class="itemPedirBtn" ion-button (click)="  onItemTapped($event, product)">Pedir</button>
+  </div>
   </ion-item>
 </ion-content>

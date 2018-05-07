@@ -18,10 +18,16 @@ page-ver-categoria-usuario {
     float: left;
     width: 70%;
   }
-  .itemPrice {
+  .itemRightElements {
     float: right;
   }
   .listItem {
     clear: both;
+  }
+  .itemPrice {
+    float: right;
+  }
+  .itemPedirBtn {
+    float: right;
   }
 }

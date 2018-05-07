@@ -1,0 +1,25 @@
+<ion-header>
+
+  <ion-navbar>
+    <ion-title>submit-pedido-usuario</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <form (ngSubmit)="onAddPedido(f.value)" #f="ngForm">
+    <ion-item>
+      <ion-label>Resumen</ion-label>
+    </ion-item>
+    <ion-item>
+      <ion-input type="text" name="producto" ngModel required [(ngModel)]="product.name"></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Date</ion-label>
+      <ion-datetime displayFormat="HH:mm"  name="horaDeseada" ngModel required></ion-datetime>
+    </ion-item>
+    <button ion-button color="secondary" type="submit" [disabled]="!f.valid">Aceptar</button>
+    <button ion-button color="danger" (click)="cancelOperation()">Cancelar</button>
+  </form>
+</ion-content>

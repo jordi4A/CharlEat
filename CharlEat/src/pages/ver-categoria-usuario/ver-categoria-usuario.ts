@@ -3,6 +3,8 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { ProductService } from '../../services/producto.service';
 import { Product } from '../../models/producto.model';
+
+import { SubmitPedidoUsuarioPage } from '../submit-pedido-usuario/submit-pedido-usuario';
 import { Category } from '../../models/categoria.model';
 import { Observable } from 'rxjs/Observable';
 
@@ -34,4 +36,7 @@ export class VerCategoriaUsuarioPage {
   ionViewDidLoad() {
   }
 
+  onItemTapped($event, product){
+    this.navCtrl.push(SubmitPedidoUsuarioPage, product);
+  }
 }

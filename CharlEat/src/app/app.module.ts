@@ -29,12 +29,14 @@ import { VerCategoriaUsuarioPage } from '../pages/ver-categoria-usuario/ver-cate
 import { VerAvisosUsuarioPage} from '../pages/ver-avisos-usuario/ver-avisos-usuario';
 import { VisualizarAvisoUsuarioPage} from '../pages/visualizar-aviso-usuario/visualizar-aviso-usuario';
 import { VerTablonUsuarioPage } from '../pages/ver-tablon-usuario/ver-tablon-usuario';
+import { SubmitPedidoUsuarioPage } from '../pages/submit-pedido-usuario/submit-pedido-usuario';
 
 import { ProductService } from '../services/producto.service';
 import { CategoryService } from '../services/categoria.service';
 import { AvisosService } from '../services/avisos.service';
 import { MenuService } from '../services/menu.service';
 import { TablonService } from '../services/tablon.service';
+import { PedidoService } from '../services/pedido.service';
 import { FIREBASE_CONFIG } from '../app/firebase.credentials';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -45,7 +47,7 @@ import {AngularFireDatabaseModule} from 'angularfire2/database'
 //Graficos
 import {ChartsModule} from 'ng2-charts'
 
-//Login 
+//Login
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthProvider } from '../providers/auth/auth';
 import { AcercaDePage } from '../pages/acerca-de/acerca-de';
@@ -79,6 +81,7 @@ import { AcercaDePage } from '../pages/acerca-de/acerca-de';
     PedidosEnEsperaPage,
     VerAvisosUsuarioPage,
     VisualizarAvisoUsuarioPage,
+    SubmitPedidoUsuarioPage,
     VerAvisosPage,
     VisualizarAvisoPage,
     VotarEncuestaPage,
@@ -110,6 +113,7 @@ import { AcercaDePage } from '../pages/acerca-de/acerca-de';
     TodosLosPedidosPage,
     VerCartaPage,
     VerCartaUsuarioPage,
+    SubmitPedidoUsuarioPage,
     VerEncuestaDelDiaPage,
     VerCategoriaPage,
     PrincipalUsuarioPage,
@@ -141,6 +145,7 @@ import { AcercaDePage } from '../pages/acerca-de/acerca-de';
     CategoryService,
     MenuService,
     AvisosService,
+    PedidoService,
     AuthProvider,
     TablonService
   ]
