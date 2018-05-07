@@ -3,4 +3,5 @@ export interface Menu {
     name: string;
     primero: string;
     segundo: string;
+    votos: number;
 }

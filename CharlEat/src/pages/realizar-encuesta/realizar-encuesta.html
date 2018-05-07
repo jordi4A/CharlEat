@@ -14,12 +14,9 @@
               <ion-icon name="add"></ion-icon>
            </button>
       </ion-buttons>
-      <ion-title>Añadir una opción de menú a la encuesta</ion-title>
+      <ion-title>Añada 4 opciones de menú</ion-title>
       </ion-navbar>
 </ion-header>
-
-
-<ion-content padding>
 
   <ion-content padding>
     <button ion-item (click)="onItemTapped($event, menu)" class="listItem" *ngFor="let menu of menus$ | async">
@@ -27,8 +24,7 @@
       <p>{{ menu.primero }}</p>
       <p>{{ menu.segundo }}</p>
     </button>
-  </ion-content>
-  <button class="button" (click)="crearGrafico()" >REALIZAR ENCUESTA </button>
-
+<br>
+    <button class="button" (click)="crearGrafico()" >REALIZAR ENCUESTA </button>
 
 </ion-content>

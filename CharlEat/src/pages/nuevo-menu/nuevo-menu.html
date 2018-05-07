@@ -25,6 +25,10 @@
         <ion-label item-start>Segundo plato: </ion-label>
         <ion-input type="text" name="segundo" ngModel required></ion-input>
       </ion-item>
+    <ion-item>
+      <ion-label item-start>Votos: </ion-label>
+      <ion-input type="number" name="votos" ngModel required></ion-input>
+    </ion-item>
       <button ion-button block type="submit" [disabled]="!f.valid">Aceptar</button>
     </form>
   </ion-content>
