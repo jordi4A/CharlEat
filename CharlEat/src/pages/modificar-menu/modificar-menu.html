@@ -12,12 +12,28 @@
               <ion-icon name="home"></ion-icon>
           </button>
       </ion-buttons>
-    <ion-title>ModificarMenu</ion-title>
+    <ion-title>Modificar Menu</ion-title>
   </ion-navbar>
 
+  <ion-navbar>
+    <ion-title>{{menu.name}}</ion-title>
+  </ion-navbar>
 </ion-header>
 
-
 <ion-content padding>
+<ion-item>
+  <ion-label>Nombre</ion-label>
+  <ion-input type="text" [(ngModel)]="menu.name" name="name" ngModel required></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label>Primer Plato</ion-label>
+  <ion-input type="text" [(ngModel)]="menu.primero" name="primero" ngModel required></ion-input>
+</ion-item>
+<ion-item>
+  <ion-label item-start>Segundo plato: </ion-label>
+  <ion-input item-end [(ngModel)]="menu.segundo" type="text"  ng-pattern="/^[0-9]+(\.[0-9]{1,2})?$/" step="0.01"></ion-input>
+</ion-item>
 
+<button ion-button block (click)="onUpdateMenu($event)">Modificar</button>
+<button ion-button block (click)="onRemoveMenu($event)">Eliminar</button>
 </ion-content>
