@@ -27,7 +27,7 @@
         <div class="menu">
             <h3>Estas son las opciones para el Menú de mañana:</h3>
     
-            <button ion-item (click)="onItemTapped($event, menu)" class="listItem" *ngFor="let menu of menus$ | async">
+            <button ion-item  class="listItem" *ngFor="let menu of menus$ | async">
                     <p>{{ menu.name }}</p>
                     <p>{{ menu.primero }}</p>
                     <p>{{ menu.segundo }}</p>
