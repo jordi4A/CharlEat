@@ -12,19 +12,19 @@
 </ion-header>
 
 <ion-content padding>
-  <form (ngSubmit)="onAddMenu(f.value)" #f="ngForm">
-    <ion-item>
-      <ion-label>Nombre</ion-label>
-      <ion-input type="text" name="name" ngModel required></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Primer Plato: </ion-label>
-      <ion-input type="text" name="primero" ngModel required></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label item-start>Segundo plato: </ion-label>
-      <ion-input type="text" name="segundo" ngModel required></ion-input>
-    </ion-item>
-    <button ion-button block type="submit" [disabled]="!f.valid">Aceptar</button>
-  </form>
-</ion-content>
+    <form (ngSubmit)="onAddMenu(f.value)" #f="ngForm">
+      <ion-item>
+        <ion-label>Nombre</ion-label>
+        <ion-input type="text" name="name" ngModel required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Primer Plato: </ion-label>
+        <ion-input type="text" name="primero" ngModel required></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label item-start>Segundo plato: </ion-label>
+        <ion-input type="text" name="segundo" ngModel required></ion-input>
+      </ion-item>
+      <button ion-button block type="submit" [disabled]="!f.valid">Aceptar</button>
+    </form>
+  </ion-content>
