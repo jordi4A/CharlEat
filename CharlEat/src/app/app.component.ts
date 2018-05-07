@@ -3,12 +3,8 @@ import { Nav, Platform } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
-<<<<<<< HEAD
-import {VerCartaPage, HoraServicioPage, PaginaPrincipalPage, PrincipalUsuarioPage, LoginPage, EncuestaPage, ModificarMenuPage, NuevoMenuPage, RealizarEncuestaPage} from '../pages/pages'
-=======
 import {VerCartaPage, HoraServicioPage, PaginaPrincipalPage, PrincipalUsuarioPage, 
   LoginPage, EncuestaPage, ModificarMenuPage, NuevoMenuPage, VerAvisosUsuarioPage, VisualizarAvisoUsuarioPage} from '../pages/pages'
->>>>>>> 2053c18652c04b4e08513ed2c8ad303be768c80e
 import { MenuPage } from '../pages/pages'
 import { AcercaDePage } from '../pages/acerca-de/acerca-de';
 
@@ -22,7 +18,7 @@ export class MyApp {
 
   //rootPage: any = PaginaPrincipalPage;
   //rootPage: any = EncuestaPage;
-  rootPage: any = PaginaPrincipalPage;
+  rootPage: any = LoginPage;
 
   pages: Array<{title: string, component: any}>;
 
