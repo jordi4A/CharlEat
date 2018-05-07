@@ -58,7 +58,13 @@ export class VerEncuestaDelDiaPage {
 
   iniciarData(){
     //Se inicia con los valores de votos que hay en la base de datos
-    this.doughnutChartData = [1,2,1,2]
+    this.menus$.subscribe(items => {
+      items.forEach(menu => {
+        this.doughnutChartData[items.indexOf(menu)] = menu.votos;
+        console.log(items.indexOf(menu) + ": " + this.doughnutChartData[items.indexOf(menu)]);
+      })
+    });
+    
   }
   onLoadCerrarSesion(){
     this.navCtrl.push(InfoPage);

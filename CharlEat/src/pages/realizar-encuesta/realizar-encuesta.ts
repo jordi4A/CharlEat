@@ -5,6 +5,7 @@ import { NuevoMenuPage, ModificarMenuPage, PaginaPrincipalPage, InfoPage } from 
 import { MenuService } from '../../services/menu.service';
 import { Menu } from '../../models/menu.model';
 import { Observable } from 'rxjs/Observable';
+import { VerEncuestaDelDiaPage } from '../ver-encuesta-del-dia/ver-encuesta-del-dia';
 
 /**
  * Generated class for the RealizarEncuestaPage page.
@@ -45,7 +46,8 @@ export class RealizarEncuestaPage {
   }
   
   crearGrafico() {
-    
+    alert("La encuesta se ha creado correctamente");
+    this.navCtrl.push(VerEncuestaDelDiaPage);
   }
 
   onLoadPaginaPrincipal(){

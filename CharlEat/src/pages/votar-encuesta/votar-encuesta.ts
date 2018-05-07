@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
-import { NuevoMenuPage, ModificarMenuPage, PaginaPrincipalPage, InfoPage } from '../pages';
+import { NuevoMenuPage, ModificarMenuPage, PaginaPrincipalPage, InfoPage, PrincipalUsuarioPage } from '../pages';
 import { MenuService } from '../../services/menu.service';
 import { Menu } from '../../models/menu.model';
 import { Observable } from 'rxjs/Observable';
@@ -52,36 +52,92 @@ export class VotarEncuestaPage {
     this.iniciarData();
   }
   onLoadPaginaPrincipal(){
-    this.navCtrl.setRoot(PaginaPrincipalPage);  // De este modo se reinicia la barra de arriba
+    this.navCtrl.setRoot(PrincipalUsuarioPage);  // De este modo se reinicia la barra de arriba
   }
 
   iniciarData(){
     //Se inicia con los valores de votos que hay en la base de datos
-    this.doughnutChartData = [1,2,1,2]
+
+    this.menus$.subscribe(items => {
+      items.forEach(menu => {
+        this.doughnutChartData[items.indexOf(menu)] = menu.votos;
+        console.log(items.indexOf(menu) + ": " + this.doughnutChartData[items.indexOf(menu)]);
+      })
+    });
+    
   }
 
 
   onLoadMenu1(){
     alert("Su voto ha sido registrado correctamente");
-    this.doughnutChartData = [this.doughnutChartData[0]+1,this.doughnutChartData[1],this.doughnutChartData[2],this.doughnutChartData[3]]
-    //Se actualiza el valor en la base de datos
-    //XXXXXXXXX
+    var num1: number = this.doughnutChartData[0];
+    num1++;
+    this.doughnutChartData = [num1,this.doughnutChartData[1],this.doughnutChartData[2],this.doughnutChartData[3]];
+    this.menus$.subscribe(items => {
+      items.forEach(menu => {
+        if(menu.name == "Menu 1"){
+          menu.votos = num1;
+          this.menuService.updateMenu(menu);
+          console.log("Solo viendo si llega aqui");
+        };
+      })
+    });
   }
+
+
   onLoadMenu2(){
     alert("Su voto ha sido registrado correctamente");
-    this.doughnutChartData = [this.doughnutChartData[0],this.doughnutChartData[1]+1,this.doughnutChartData[2],this.doughnutChartData[3]]
+    var num2: number = this.doughnutChartData[1];
+    num2++;
+    this.doughnutChartData = [this.doughnutChartData[0],num2,this.doughnutChartData[2],this.doughnutChartData[3]];
+    this.menus$.subscribe(items => {
+      items.forEach(menu => {
+        if(menu.name == "Menu 2"){
+          menu.votos = num2;
+          this.menuService.updateMenu(menu);
+          console.log("Solo viendo si llega aqui");
+        };
+      })
+    });
   }
   onLoadMenu3(){
     alert("Su voto ha sido registrado correctamente");
-    this.doughnutChartData = [this.doughnutChartData[0],this.doughnutChartData[1],this.doughnutChartData[2]+1,this.doughnutChartData[3]]
+    var num3: number = this.doughnutChartData[2];
+    num3++;
+    this.doughnutChartData = [this.doughnutChartData[0],this.doughnutChartData[1],num3,this.doughnutChartData[3]];
+    this.menus$.subscribe(items => {
+      items.forEach(menu => {
+        if(menu.name == "Menu 3"){
+          menu.votos = num3;
+          this.menuService.updateMenu(menu);
+          console.log("Solo viendo si llega aqui");
+        };
+      })
+    });
   }
   onLoadMenu4(){
     alert("Su voto ha sido registrado correctamente");
-    this.doughnutChartData = [this.doughnutChartData[0],this.doughnutChartData[1],this.doughnutChartData[2],this.doughnutChartData[3]+1]
+    var num4: number = this.doughnutChartData[3];
+    num4++;
+    this.doughnutChartData = [this.doughnutChartData[0],this.doughnutChartData[1],this.doughnutChartData[2],num4];
+    this.menus$.subscribe(items => {
+      items.forEach(menu => {
+        if(menu.name == "Menu 4"){
+          menu.votos = num4;
+          this.menuService.updateMenu(menu);
+          console.log("Solo viendo si llega aqui");
+        };
+      })
+    });
   }
   onLoadCerrarSesion(){
     this.navCtrl.push(InfoPage);
 
+  }
+  onUpdateMenu() {
+    this.menu.votos = 0;
+    this.menuService.updateMenu(this.menu);
+    this.navCtrl.pop();
   }
 
 }

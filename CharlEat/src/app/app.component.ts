@@ -1,11 +1,10 @@
 import { Component, ViewChild } from '@angular/core';
-import { Nav, Platform } from 'ionic-angular';
+import { Nav, Platform, Menu } from 'ionic-angular';
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import {VerCartaPage, HoraServicioPage, PaginaPrincipalPage, PrincipalUsuarioPage, 
-  LoginPage, EncuestaPage, ModificarMenuPage, NuevoMenuPage, VerAvisosUsuarioPage, VisualizarAvisoUsuarioPage, VotarEncuestaPage, InfoPage} from '../pages/pages'
-import { MenuPage } from '../pages/pages'
+  LoginPage, EncuestaPage, ModificarMenuPage, NuevoMenuPage, VerAvisosUsuarioPage, VisualizarAvisoUsuarioPage, VotarEncuestaPage, InfoPage, MenuPage} from '../pages/pages'
 import { AcercaDePage } from '../pages/acerca-de/acerca-de';
 import { VerEncuestaDelDiaPage } from '../pages/ver-encuesta-del-dia/ver-encuesta-del-dia';
 import { AuthProvider } from '../providers/auth/auth';
@@ -37,6 +36,7 @@ export class MyApp {
     });
     // used for an example of ngFor and navigation
     this.pages = [
+      { title: 'Login', component: LoginPage},
       { title: 'Ver Carta', component: VerCartaPage },
       { title: 'Administrar Pedidos', component: HoraServicioPage },
       { title: 'Acerca de', component: AcercaDePage},

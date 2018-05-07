@@ -3,7 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { InfoPage } from '../pages';
 
 /**
- * Generated class for the MenuPage page.
+ * Generated class for the VerMenuUsuarioPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -26,4 +26,5 @@ export class MenuPage {
     this.navCtrl.push(InfoPage);
 
   }
+
 }

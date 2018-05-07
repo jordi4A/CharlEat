@@ -62,7 +62,7 @@ export class LoginPage {
         buttons: ['Aceptar']
       });
       alert.present();
-      this.navCtrl.setRoot(PaginaPrincipalPage);  // De este modo se reinicia la barra de arriba
+      this.navCtrl.setRoot(PrincipalUsuarioPage);  // De este modo se reinicia la barra de arriba
       }
     )
      .catch(err=>{
