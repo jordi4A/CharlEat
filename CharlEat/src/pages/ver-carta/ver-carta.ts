@@ -46,7 +46,9 @@ export class VerCartaPage {
   onLoadMenu() {
     this.navCtrl.push(VerMenuUsuarioPage);
   }
-
+  onLoadNewProductPage() {
+    this.navCtrl.push(NuevoProductoPage);
+  }
   onItemTapped($event, category) {
     this.navCtrl.push(VerCategoriaPage, category);
   }

@@ -5,6 +5,9 @@
         <button ion-button icon-only (click)="onLoadPaginaPrincipal()">
             <ion-icon name="home"></ion-icon>
         </button>
+        <button ion-button icon-only (click)="onLoadNewProductPage()">
+            <ion-icon name="add"></ion-icon>
+        </button>
     </ion-buttons>
   <ion-title>Carta</ion-title>
 </ion-navbar>
@@ -25,66 +28,5 @@
       <ion-label>{{ category.nombre }}</ion-label>
       <ion-icon name="arrow-dropright" item-end color="dark" showWhen="android"></ion-icon>
     </button>
-<!--
-    <button ion-item>
-      <ion-icon name="flame" item-start color="primary"></ion-icon>
-      <ion-label>Promociones</ion-label>
-      <ion-icon name="arrow-dropright" item-end color="dark" showWhen="android"></ion-icon>
-    </button>
-
-    <button ion-item (click)="onLoadMenu()">
-      <ion-icon name="restaurant" item-start color="primary"></ion-icon>
-      <ion-label>Menú</ion-label>
-      <ion-icon name="arrow-dropright" item-end color="dark" showWhen="android"></ion-icon>
-    </button>
-
-    <button ion-item (click)="onLoadBebidas()">
-      <ion-icon name="beer" item-start color="primary"></ion-icon>
-      <ion-label>Bebidas</ion-label>
-      <ion-icon name="arrow-dropright" item-end color="dark" showWhen="android"></ion-icon>
-    </button>
-
-    <button ion-item>
-      <ion-icon name="close" item-start color="primary"></ion-icon>
-      <ion-label>Platos combinados</ion-label>
-      <ion-icon name="arrow-dropright" item-end color="dark" showWhen="android"></ion-icon>
-    </button>
-
-  <button ion-item>
-    <ion-icon name="close" item-start color="primary"></ion-icon>
-    <ion-label>Hamburguesas</ion-label>
-    <ion-icon name="arrow-dropright" item-end color="dark" showWhen="android"></ion-icon>
-  </button>
-
-  <button ion-item>
-    <ion-icon name="pizza" item-start color="primary"></ion-icon>
-    <ion-label>Pasta</ion-label>
-    <ion-icon name="arrow-dropright" item-end color="dark" showWhen="android"></ion-icon>
-  </button>
-
-  <button ion-item>
-    <ion-icon name="close" item-start color="primary"></ion-icon>
-    <ion-label>Bollería</ion-label>
-    <ion-icon name="arrow-dropright" item-end color="dark" showWhen="android"></ion-icon>
-  </button>
-
-  <button ion-item>
-    <ion-icon name="close" item-start color="primary"></ion-icon>
-    <ion-label>Bocadillos</ion-label>
-    <ion-icon name="arrow-dropright" item-end color="dark" showWhen="android"></ion-icon>
-  </button>
-
-  <button ion-item>
-    <ion-icon name="close" item-start color="primary"></ion-icon>
-    <ion-label>Pinchos</ion-label>
-    <ion-icon name="arrow-dropright" item-end color="dark" showWhen="android"></ion-icon>
-  </button>
-
-  <button ion-item>
-    <ion-icon name="close" item-start color="primary"></ion-icon>
-    <ion-label>Sandwiches</ion-label>
-    <ion-icon name="arrow-dropright" item-end color="dark" showWhen="android"></ion-icon>
-  </button>
--->
 </ion-list>
 </ion-content>

@@ -22,7 +22,8 @@ import { PrincipalUsuarioPage } from '../pages/principal-usuario/principal-usuar
 import { VerMenuUsuarioPage} from '../pages/ver-menu-usuario/ver-menu-usuario';
 import { VerCartaUsuarioPage } from '../pages/ver-carta-usuario/ver-carta-usuario';
 import { VerCategoriaUsuarioPage } from '../pages/ver-categoria-usuario/ver-categoria-usuario';
-
+import { VerAvisosUsuarioPage} from '../pages/ver-avisos-usuario/ver-avisos-usuario';
+import { VisualizarAvisoUsuarioPage} from '../pages/visualizar-aviso-usuario/visualizar-aviso-usuario';
 
 import { ProductService } from '../services/producto.service';
 import { CategoryService } from '../services/categoria.service';
@@ -65,7 +66,9 @@ import { AcercaDePage } from '../pages/acerca-de/acerca-de';
     ModificarMenuPage,
     AcercaDePage,
     PedidosAceptadosPage,
-    PedidosEnEsperaPage
+    PedidosEnEsperaPage,
+    VerAvisosUsuarioPage,
+    VisualizarAvisoUsuarioPage
   ],
   imports: [
     BrowserModule,
@@ -100,7 +103,9 @@ import { AcercaDePage } from '../pages/acerca-de/acerca-de';
     ModificarMenuPage,
     AcercaDePage,
     PedidosAceptadosPage,
-    PedidosEnEsperaPage
+    PedidosEnEsperaPage,
+    VerAvisosUsuarioPage,
+    VisualizarAvisoUsuarioPage
   ],
   providers: [
     StatusBar,
