@@ -1,0 +1,21 @@
+<ion-header>
+
+  <ion-navbar color="primary">
+    <ion-buttons end>
+      <button ion-button icon-only (click)="onLoadPaginaPrincipal()">
+          <ion-icon name="home"></ion-icon>
+       </button>
+  </ion-buttons>
+<ion-title>Aceptación de pedido: {{product.producto}}</ion-title>
+</ion-navbar>
+
+</ion-header>
+
+
+<ion-content padding>
+  <ion-list>
+    <ion-label><h3>Producto: </h3>{{ product.producto }}</ion-label>
+    <ion-label><h3>Hora: </h3>{{ product.horaDeseada }}</ion-label>
+    <button ion-button block (click)="onAddPedido(product)">Aceptar</button>
+</ion-list>
+</ion-content>

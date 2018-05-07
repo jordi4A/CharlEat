@@ -3,7 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
-import {  NuevoProductoPage,  MenuPage, LoginPage, NuevoMenuPage, ModificarMenuPage, PedidosAceptadosPage, PedidosEnEsperaPage, VotarEncuestaPage, InfoPage, VerPedidoPage } from '../pages/pages';
+import {  NuevoProductoPage,  MenuPage, LoginPage, NuevoMenuPage, ModificarMenuPage, PedidosAceptadosPage, PedidosEnEsperaPage, VotarEncuestaPage, InfoPage, VerPedidoPage, AceptarPedidoPage } from '../pages/pages';
 import { ModificarProductoPage,} from '../pages/pages';
 import { PaginaPrincipalPage } from '../pages/pagina-principal/pagina-principal';
 import { HoraServicioPage } from '../pages/hora-servicio/hora-servicio';
@@ -51,6 +51,8 @@ import {ChartsModule} from 'ng2-charts'
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthProvider } from '../providers/auth/auth';
 import { AcercaDePage } from '../pages/acerca-de/acerca-de';
+import { PedidosEsperaService } from '../services/pedidosEspera.service';
+import { PedidosAceptadosService } from '../services/pedidosAceptados.service';
 
 @NgModule({
   declarations: [
@@ -89,7 +91,8 @@ import { AcercaDePage } from '../pages/acerca-de/acerca-de';
     VerTablonPage,
     EscribirComentarioPage,
     VerTablonUsuarioPage,
-    VerPedidoPage
+    VerPedidoPage,
+    AceptarPedidoPage
   ],
   imports: [
     BrowserModule,
@@ -137,7 +140,8 @@ import { AcercaDePage } from '../pages/acerca-de/acerca-de';
     EscribirComentarioPage,
     VerTablonUsuarioPage,
     VotarEncuestaPage,
-    VerPedidoPage
+    VerPedidoPage,
+    AceptarPedidoPage
   ],
   providers: [
     StatusBar,
@@ -149,7 +153,9 @@ import { AcercaDePage } from '../pages/acerca-de/acerca-de';
     AvisosService,
     PedidoService,
     AuthProvider,
-    TablonService
+    TablonService,
+    PedidosEsperaService,
+    PedidosAceptadosService
   ]
 })
 export class AppModule {}

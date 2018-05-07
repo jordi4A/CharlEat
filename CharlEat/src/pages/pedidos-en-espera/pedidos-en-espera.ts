@@ -1,13 +1,12 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { PaginaPrincipalPage, InfoPage } from '../pages';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 
-/**
- * Generated class for the PedidosEnEsperaPage page.
- *
- * See https://ionicframework.com/docs/components/#navigation for more info on
- * Ionic pages and navigation.
- */
+import { NuevoMenuPage, ModificarMenuPage, PaginaPrincipalPage, InfoPage, PrincipalUsuarioPage, AceptarPedidoPage } from '../pages';
+import { PedidosEsperaService } from '../../services/pedidosEspera.service';
+import { PedidoEspera } from '../../models/pedidosEspera.model';
+import { Observable } from 'rxjs/Observable';
+import { VerEncuestaDelDiaPage } from '../ver-encuesta-del-dia/ver-encuesta-del-dia';
+
 
 @IonicPage()
 @Component({
@@ -16,17 +15,30 @@ import { PaginaPrincipalPage, InfoPage } from '../pages';
 })
 export class PedidosEnEsperaPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  pedidos$: Observable<PedidoEspera[]>;
+  pedido: PedidoEspera;
+  constructor(public navCtrl: NavController, public navParams: NavParams, private pedidoService: PedidosEsperaService, private alertCtrl: AlertController) {
+    this.pedido = this. navParams.data;
+    this.pedidos$ = this.pedidoService
+    .getPedidoEspera()  //Retorna la DB
+    .snapshotChanges() //retorna los cambios en la DB (key and value)
+    .map(
+      changes => {
+        return changes.map(c=> ({
+          key: c.payload.key, ...c.payload.val()
+        }));
+      });
   }
 
-  ionViewDidLoad() {
-    console.log('ionViewDidLoad PedidosEnEsperaPage');
-  }
+
   onLoadPaginaPrincipal(){
-    this.navCtrl.setRoot(PaginaPrincipalPage);  // De este modo se reinicia la barra de arriba
+    this.navCtrl.setRoot(PrincipalUsuarioPage);  // De este modo se reinicia la barra de arriba
   }
   onLoadCerrarSesion(){
     this.navCtrl.push(InfoPage);
 
+  }
+  onItemTapped($event, pedido) {
+    this.navCtrl.push(AceptarPedidoPage, pedido);
   }
 }

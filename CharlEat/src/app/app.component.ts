@@ -25,7 +25,7 @@ export class MyApp {
 
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, private auth: AuthProvider
   ) {
-    this.initializeApp();
+    this.initializeApp();/*
     this.auth.Session.subscribe(session=>{
       if(session){
           this.rootPage = PrincipalUsuarioPage;
@@ -33,10 +33,11 @@ export class MyApp {
         else{
           this.rootPage = LoginPage;
         }
-    });
+    });*/
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Login', component: LoginPage},
+      { title: 'Pagina Principal', component: PaginaPrincipalPage},
       { title: 'Ver Carta', component: VerCartaPage },
       { title: 'Ver Encuesta', component: VerEncuestaDelDiaPage },
       { title: 'Administrar Pedidos', component: HoraServicioPage },
