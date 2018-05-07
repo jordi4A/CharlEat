@@ -7,6 +7,7 @@ import { MandarAvisoPage } from '../mandar-aviso/mandar-aviso';
 import { VerAvisosUsuarioPage } from '../ver-avisos-usuario/ver-avisos-usuario';
 import { VerEncuestaDelDiaPage } from '../ver-encuesta-del-dia/ver-encuesta-del-dia';
 import { VerTablonUsuarioPage } from '../pages';
+import { VotarEncuestaPage } from '../pages';
 
 /**
  * Generated class for the PrincipalUsuarioPage page.
@@ -42,7 +43,7 @@ export class PrincipalUsuarioPage {
     this.navCtrl.push(VerAvisosUsuarioPage);
   }
   loadVotarEncuesta(){
-    this.navCtrl.push(VerEncuestaDelDiaPage);
+    this.navCtrl.push(VotarEncuestaPage);
 
   }
   loadVerTablon(){

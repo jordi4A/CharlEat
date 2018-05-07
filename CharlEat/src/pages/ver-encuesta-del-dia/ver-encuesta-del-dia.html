@@ -18,11 +18,6 @@
 </ion-header>
 
 <ion-content padding>
-        <script>
-                function hola() {
-                    alert("Page is loaded");
-                }
-                </script>
         
         <div class="menu">
             <h3>Estas son las opciones para el Menú de mañana:</h3>
@@ -45,21 +40,4 @@
                         (chartClick)="chartClicked($event)"></canvas>
           </div>
     </div>
-    <div class= opciones>
-            <button ion-item color='danger' (click)="onLoadMenu1()">
-                    <ion-label>Votar Menú 1</ion-label>
-            </button>
-            <br>
-            <button ion-item color='primary' (click)="onLoadMenu2()">
-                    <ion-label>Votar Menú 2</ion-label>
-            </button>
-            <br>
-            <button id = "menu3" ion-item color='energized' (click)="onLoadMenu3()">
-                    <ion-label>Votar Menú 3</ion-label>
-            </button>
-            <br>
-            <button id="menu4" ion-item color='dark' (click)="onLoadMenu4()">
-                    <ion-label>Votar Menú 4</ion-label>
-            </button>
-        </div>
 </ion-content>

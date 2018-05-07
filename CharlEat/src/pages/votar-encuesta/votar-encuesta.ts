@@ -5,9 +5,8 @@ import { MenuService } from '../../services/menu.service';
 import { Menu } from '../../models/menu.model';
 import { Observable } from 'rxjs/Observable';
 
-
 /**
- * Generated class for the VerEncuestaDelDiaPage page.
+ * Generated class for the VotarEncuestaPage page.
  *
  * See https://ionicframework.com/docs/components/#navigation for more info on
  * Ionic pages and navigation.
@@ -15,10 +14,10 @@ import { Observable } from 'rxjs/Observable';
 
 @IonicPage()
 @Component({
-  selector: 'page-ver-encuesta-del-dia',
-  templateUrl: 'ver-encuesta-del-dia.html',
+  selector: 'page-votar-encuesta',
+  templateUrl: 'votar-encuesta.html',
 })
-export class VerEncuestaDelDiaPage {
+export class VotarEncuestaPage {
 
   menus$: Observable<Menu[]>;
   menu: Menu;
@@ -59,6 +58,26 @@ export class VerEncuestaDelDiaPage {
   iniciarData(){
     //Se inicia con los valores de votos que hay en la base de datos
     this.doughnutChartData = [1,2,1,2]
+  }
+
+
+  onLoadMenu1(){
+    alert("Su voto ha sido registrado correctamente");
+    this.doughnutChartData = [this.doughnutChartData[0]+1,this.doughnutChartData[1],this.doughnutChartData[2],this.doughnutChartData[3]]
+    //Se actualiza el valor en la base de datos
+    //XXXXXXXXX
+  }
+  onLoadMenu2(){
+    alert("Su voto ha sido registrado correctamente");
+    this.doughnutChartData = [this.doughnutChartData[0],this.doughnutChartData[1]+1,this.doughnutChartData[2],this.doughnutChartData[3]]
+  }
+  onLoadMenu3(){
+    alert("Su voto ha sido registrado correctamente");
+    this.doughnutChartData = [this.doughnutChartData[0],this.doughnutChartData[1],this.doughnutChartData[2]+1,this.doughnutChartData[3]]
+  }
+  onLoadMenu4(){
+    alert("Su voto ha sido registrado correctamente");
+    this.doughnutChartData = [this.doughnutChartData[0],this.doughnutChartData[1],this.doughnutChartData[2],this.doughnutChartData[3]+1]
   }
 
 }

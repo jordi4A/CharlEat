@@ -3,7 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
-import {  NuevoProductoPage,  MenuPage, LoginPage, NuevoMenuPage, ModificarMenuPage, PedidosAceptadosPage, PedidosEnEsperaPage } from '../pages/pages';
+import {  NuevoProductoPage,  MenuPage, LoginPage, NuevoMenuPage, ModificarMenuPage, PedidosAceptadosPage, PedidosEnEsperaPage, VotarEncuestaPage } from '../pages/pages';
 import { ModificarProductoPage,} from '../pages/pages';
 import { PaginaPrincipalPage } from '../pages/pagina-principal/pagina-principal';
 import { HoraServicioPage } from '../pages/hora-servicio/hora-servicio';
@@ -77,9 +77,7 @@ import { AcercaDePage } from '../pages/acerca-de/acerca-de';
     VisualizarAvisoUsuarioPage,
     VerAvisosPage,
     VisualizarAvisoPage,
-    VerTablonPage,
-    EscribirComentarioPage,
-    VerTablonUsuarioPage
+    VotarEncuestaPage
   ],
   imports: [
     BrowserModule,

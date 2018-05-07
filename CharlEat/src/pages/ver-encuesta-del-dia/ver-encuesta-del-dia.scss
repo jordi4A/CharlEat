@@ -1,24 +1,14 @@
 page-ver-encuesta-del-dia {
     .grafico{
-        float:right;
-        height: 60%;
-        width: 60%;
+        float:left;
+        height: 80%;
+        width: 80%;
     }
-    .opciones{
-        float:right;
-        height: 60px;
-        width: 150px;
-        }
+
     .menu{
         float:left;
         height: 500px;
         width: 250px;
-    }
-    #menu3{
-        background-color: yellow;
-    }
-    #menu4{
-        background-color: grey;
     }
 
 }
