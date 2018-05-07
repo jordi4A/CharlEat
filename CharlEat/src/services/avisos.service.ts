@@ -19,6 +19,10 @@ export class AvisosService {
       return this.avisosRef.remove(value.key);
     }
 
+    getAvisosUsuario(usuario: string){
+      this.avisosRef = this.db.list<Aviso>('Avisos', ref => ref.orderByChild("nombre_usuario").equalTo(usuario));
+      return this.avisosRef;
+    }
     getAvisos(){
       return this.avisosRef;
     }

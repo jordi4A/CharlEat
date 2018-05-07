@@ -3,6 +3,7 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
 import { VerMenuUsuarioPage} from '../ver-menu-usuario/ver-menu-usuario';
 import {VerCartaUsuarioPage} from '../ver-carta-usuario/ver-carta-usuario';
+import { MandarAvisoPage } from '../mandar-aviso/mandar-aviso';
 
 /**
  * Generated class for the PrincipalUsuarioPage page.
@@ -30,5 +31,8 @@ export class PrincipalUsuarioPage {
   }
   loadVerCarta() {
     this.navCtrl.push(VerCartaUsuarioPage);
+  }
+  loadMandarAviso() {
+    this.navCtrl.push(MandarAvisoPage);
   }
 }

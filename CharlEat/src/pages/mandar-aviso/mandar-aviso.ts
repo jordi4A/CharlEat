@@ -2,7 +2,6 @@ import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AvisosService } from '../../services/avisos.service';
 import { Aviso } from '../../models/aviso.model';
-import { Observable } from 'rxjs/Observable';
 
 
 /**
