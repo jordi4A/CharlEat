@@ -77,7 +77,10 @@ import { AcercaDePage } from '../pages/acerca-de/acerca-de';
     VisualizarAvisoUsuarioPage,
     VerAvisosPage,
     VisualizarAvisoPage,
-    VotarEncuestaPage
+    VotarEncuestaPage,
+    VerTablonPage,
+    EscribirComentarioPage,
+    VerTablonUsuarioPage
   ],
   imports: [
     BrowserModule,
@@ -119,7 +122,8 @@ import { AcercaDePage } from '../pages/acerca-de/acerca-de';
     VisualizarAvisoPage,
     VerTablonPage,
     EscribirComentarioPage,
-    VerTablonUsuarioPage
+    VerTablonUsuarioPage,
+    VotarEncuestaPage
   ],
   providers: [
     StatusBar,
