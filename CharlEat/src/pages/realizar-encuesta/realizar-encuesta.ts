@@ -21,28 +21,29 @@ import { Observable } from 'rxjs/Observable';
 export class RealizarEncuestaPage {
 
   menus$: Observable<Menu[]>;
-
+  menu: Menu;
   constructor(public navCtrl: NavController, public navParams: NavParams, private menuService: MenuService, private alertCtrl: AlertController) {
+    this.menu = this. navParams.data;
+    this.menus$ = this.menuService
+    .getMenu()  //Retorna la DB
+    .snapshotChanges() //retorna los cambios en la DB (key and value)
+    .map(
+      changes => {
+        return changes.map(c=> ({
+          key: c.payload.key, ...c.payload.val()
+        }));
+      });
   }
 
-  ionViewWillEnter() {
-   this.menus$ = this.menuService
-     .getMenu()  //Retorna la DB
-     .snapshotChanges() //retorna los cambios en la DB (key and value)
-     .map(
-       changes => {
-         return changes.map(c=> ({
-           key: c.payload.key, ...c.payload.val()
-         }));
-       });
-  }
+
   onLoadNewPage() {
     // Reset the content nav to have just this page
     this.navCtrl.push(NuevoMenuPage);
   }
   onItemTapped($event, menu) {
-    console.log(menu); // Comprobamos que pasa bien el argumento
+      this.navCtrl.push(ModificarMenuPage, menu);
   }
+  
   crearGrafico() {
 
   }
