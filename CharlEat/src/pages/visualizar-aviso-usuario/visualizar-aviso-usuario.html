@@ -6,13 +6,22 @@
 -->
 <ion-header>
 
-  <ion-navbar>
-    <ion-title>visualizar-aviso-usuario</ion-title>
-  </ion-navbar>
+  <ion-navbar color="primary">
+    <ion-buttons end>
+      <button ion-button icon-only (click)="onLoadPaginaPrincipal()">
+          <ion-icon name="home"></ion-icon>
+       </button>
+  </ion-buttons>
+<ion-title>Motivo: {{aviso.motivo}}</ion-title>
+</ion-navbar>
 
 </ion-header>
 
 
 <ion-content padding>
+  <ion-list>
+    <ion-label><h3>Usuario: </h3>{{ aviso.nombre_usuario }}</ion-label>
+    <ion-label><h3>Comentario: </h3>{{ aviso.comentario }}</ion-label>
 
+</ion-list>
 </ion-content>

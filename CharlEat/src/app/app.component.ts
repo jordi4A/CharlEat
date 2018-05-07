@@ -4,7 +4,7 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import {VerCartaPage, HoraServicioPage, PaginaPrincipalPage, PrincipalUsuarioPage, 
-  LoginPage, EncuestaPage, ModificarMenuPage, NuevoMenuPage, VerAvisosUsuarioPage} from '../pages/pages'
+  LoginPage, EncuestaPage, ModificarMenuPage, NuevoMenuPage, VerAvisosUsuarioPage, VisualizarAvisoUsuarioPage} from '../pages/pages'
 import { MenuPage } from '../pages/pages'
 import { AcercaDePage } from '../pages/acerca-de/acerca-de';
 

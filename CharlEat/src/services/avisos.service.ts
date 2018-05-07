@@ -26,4 +26,7 @@ export class AvisosService {
     getAvisos(){
       return this.avisosRef;
     }
+    getAviso(aviso: Aviso){
+      return this.db.list<Aviso>('Avisos', ref => ref.orderByChild("key").equalTo(aviso.key)); 
+    }
 }
