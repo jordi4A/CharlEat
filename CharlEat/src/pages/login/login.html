@@ -1,33 +1,71 @@
-
 <!--
   Generated template for the LoginPage page.
+
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
 -->
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>Iniciar Sesión</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
-
-<ion-content padding>
-    <ion-navbar>
+    <ion-navbar color= "danger">
         <ion-buttons end>
-            <button ion-button icon-only (click)="onLoadCocina()">
+            <button ion-button  icon-only (click)="onLoadCocina()" >
                 <ion-icon name="cafe"></ion-icon>
              </button>
         </ion-buttons>
-        <ion-title>Cocina</ion-title>
-        </ion-navbar>      
-  <ion-navbar>
-      <ion-buttons end>
-          <button ion-button icon-only (click)="onLoadCliente()">
-              <ion-icon name="add"></ion-icon>
-           </button>
-      </ion-buttons>
-      <ion-title>Cliente</ion-title>
-      </ion-navbar>
-</ion-content>
+        <ion-title>¿Eres un catering? Haz click aquí!</ion-title>
+        </ion-navbar> 
+    <ion-navbar>
+      <ion-title>Login de Usuario</ion-title>
+    </ion-navbar>
+   
+  </ion-header>
+  
+  <ion-content>
+  
+  <ion-list>
+      <form>
+        <ion-item>
+          <ion-label floating>Email</ion-label>
+          <ion-input
+            [(ngModel)]="user.email"
+            name="email"
+            type="text"
+            autocapitalize="off"
+            required
+          >
+          </ion-input>
+        </ion-item>
+  
+        <ion-item>
+          <ion-label floating>Contraseña</ion-label>
+          <ion-input
+            [(ngModel)]="user.password"
+            name="password"
+            type="password"
+            required
+          >
+          </ion-input>
+        </ion-item>
+        <div padding>
+          <button
+              ion-button 
+              (click)="login()"
+              type="submit"
+              color="primary"
+              block
+          >
+            Login
+          </button>
+  
+          <button
+            ion-button 
+            (click)="signin()"
+            type="submit"
+            color="secondary"
+            block
+          >
+            Dar de alta
+          </button>
+        </div>
+      </form>
+    </ion-list>
+  </ion-content>

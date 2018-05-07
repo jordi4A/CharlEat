@@ -8,6 +8,7 @@ import { VerCategoriaUsuarioPage } from '../ver-categoria-usuario/ver-categoria-
 import { CategoryService } from '../../services/categoria.service';
 import { Category } from '../../models/categoria.model';
 import { Observable } from 'rxjs/Observable';
+import { InfoPage } from '../pages';
 
 
 @IonicPage()
@@ -45,5 +46,9 @@ export class VerCartaUsuarioPage {
   }
   onItemTapped($event, category) {
     this.navCtrl.push(VerCategoriaUsuarioPage, category);
+  }
+  onLoadCerrarSesion(){
+    this.navCtrl.push(InfoPage);
+
   }
 }

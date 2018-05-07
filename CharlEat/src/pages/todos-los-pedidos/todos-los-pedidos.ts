@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { InfoPage } from '../pages';
 
 /**
  * Generated class for the TodosLosPedidosPage page.
@@ -20,6 +21,10 @@ export class TodosLosPedidosPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad TodosLosPedidosPage');
+  }
+  onLoadCerrarSesion(){
+    this.navCtrl.push(InfoPage);
+
   }
 
 }

@@ -4,10 +4,11 @@ import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
 
 import {VerCartaPage, HoraServicioPage, PaginaPrincipalPage, PrincipalUsuarioPage, 
-  LoginPage, EncuestaPage, ModificarMenuPage, NuevoMenuPage, VerAvisosUsuarioPage, VisualizarAvisoUsuarioPage, VotarEncuestaPage} from '../pages/pages'
+  LoginPage, EncuestaPage, ModificarMenuPage, NuevoMenuPage, VerAvisosUsuarioPage, VisualizarAvisoUsuarioPage, VotarEncuestaPage, InfoPage} from '../pages/pages'
 import { MenuPage } from '../pages/pages'
 import { AcercaDePage } from '../pages/acerca-de/acerca-de';
 import { VerEncuestaDelDiaPage } from '../pages/ver-encuesta-del-dia/ver-encuesta-del-dia';
+import { AuthProvider } from '../providers/auth/auth';
 
 
 
@@ -23,9 +24,17 @@ export class MyApp {
 
   pages: Array<{title: string, component: any}>;
 
-  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
+  constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen, private auth: AuthProvider
+  ) {
     this.initializeApp();
-
+    this.auth.Session.subscribe(session=>{
+      if(session){
+          this.rootPage = PrincipalUsuarioPage;
+      }
+        else{
+          this.rootPage = LoginPage;
+        }
+    });
     // used for an example of ngFor and navigation
     this.pages = [
       { title: 'Ver Carta', component: VerCartaPage },

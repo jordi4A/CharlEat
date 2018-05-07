@@ -4,6 +4,7 @@ import { AvisosService } from '../../services/avisos.service';
 import { Aviso } from '../../models/aviso.model';
 import { VisualizarAvisoPage } from '../visualizar-aviso/visualizar-aviso';
 import { Observable } from 'rxjs/Observable';
+import { InfoPage } from '../pages';
 
 // import { VerMenuUsuarioPage } from '../ver-menu-usuario/ver-menu-usuario';
 // import { PrincipalUsuarioPage} from '../principal-usuario/principal-usuario';
@@ -44,6 +45,10 @@ export class VerAvisosPage {
   // }
   onAvisoTapped($event, aviso) {
     this.navCtrl.push(VisualizarAvisoPage, aviso);
+  }
+  onLoadCerrarSesion(){
+    this.navCtrl.push(InfoPage);
+
   }
 
 }

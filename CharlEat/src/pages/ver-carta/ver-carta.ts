@@ -4,7 +4,7 @@ import { MenuPage } from '../menu/menu';
 import {PaginaPrincipalPage} from '../pagina-principal/pagina-principal';
 import { VerMenuUsuarioPage } from '../ver-menu-usuario/ver-menu-usuario';
 
-import { NuevoProductoPage, ModificarProductoPage } from '../pages';
+import { NuevoProductoPage, ModificarProductoPage, InfoPage } from '../pages';
 import { VerCategoriaPage } from '../ver-categoria/ver-categoria';
 import { CategoryService } from '../../services/categoria.service';
 import { Category } from '../../models/categoria.model';
@@ -51,5 +51,9 @@ export class VerCartaPage {
   }
   onItemTapped($event, category) {
     this.navCtrl.push(VerCategoriaPage, category);
+  }
+  onLoadCerrarSesion(){
+    this.navCtrl.push(InfoPage);
+
   }
 }

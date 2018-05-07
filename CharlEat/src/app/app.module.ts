@@ -3,7 +3,7 @@ import { ErrorHandler, NgModule } from '@angular/core';
 import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 
 import { MyApp } from './app.component';
-import {  NuevoProductoPage,  MenuPage, LoginPage, NuevoMenuPage, ModificarMenuPage, PedidosAceptadosPage, PedidosEnEsperaPage, VotarEncuestaPage } from '../pages/pages';
+import {  NuevoProductoPage,  MenuPage, LoginPage, NuevoMenuPage, ModificarMenuPage, PedidosAceptadosPage, PedidosEnEsperaPage, VotarEncuestaPage, InfoPage } from '../pages/pages';
 import { ModificarProductoPage,} from '../pages/pages';
 import { PaginaPrincipalPage } from '../pages/pagina-principal/pagina-principal';
 import { HoraServicioPage } from '../pages/hora-servicio/hora-servicio';
@@ -26,7 +26,7 @@ import { VerCartaUsuarioPage } from '../pages/ver-carta-usuario/ver-carta-usuari
 import { VerCategoriaUsuarioPage } from '../pages/ver-categoria-usuario/ver-categoria-usuario';
 import { VerAvisosUsuarioPage} from '../pages/ver-avisos-usuario/ver-avisos-usuario';
 import { VisualizarAvisoUsuarioPage} from '../pages/visualizar-aviso-usuario/visualizar-aviso-usuario';
-
+import { AcercaDePage } from '../pages/acerca-de/acerca-de';
 import { ProductService } from '../services/producto.service';
 import { CategoryService } from '../services/categoria.service';
 import { AvisosService } from '../services/avisos.service';
@@ -40,7 +40,10 @@ import {AngularFireDatabaseModule} from 'angularfire2/database'
 
 //Graficos
 import {ChartsModule} from 'ng2-charts'
-import { AcercaDePage } from '../pages/acerca-de/acerca-de';
+
+//Login 
+import { AngularFireAuthModule } from 'angularfire2/auth';
+import { AuthProvider } from '../providers/auth/auth';
 
 @NgModule({
   declarations: [
@@ -73,14 +76,16 @@ import { AcercaDePage } from '../pages/acerca-de/acerca-de';
     VisualizarAvisoUsuarioPage,
     VerAvisosPage,
     VisualizarAvisoPage,
-    VotarEncuestaPage
+    VotarEncuestaPage,
+    InfoPage
   ],
   imports: [
     BrowserModule,
     IonicModule.forRoot(MyApp),
     AngularFireModule.initializeApp(FIREBASE_CONFIG),
     AngularFireDatabaseModule,
-    ChartsModule
+    ChartsModule,
+    AngularFireAuthModule
   ],
   bootstrap: [IonicApp],
   entryComponents: [
@@ -113,7 +118,8 @@ import { AcercaDePage } from '../pages/acerca-de/acerca-de';
     VisualizarAvisoUsuarioPage,
     VerAvisosPage,
     VisualizarAvisoPage,
-    VotarEncuestaPage
+    VotarEncuestaPage,
+    InfoPage
   ],
   providers: [
     StatusBar,
@@ -122,7 +128,8 @@ import { AcercaDePage } from '../pages/acerca-de/acerca-de';
     ProductService,
     CategoryService,
     MenuService,
-    AvisosService
+    AvisosService,
+    AuthProvider
   ]
 })
 export class AppModule {}

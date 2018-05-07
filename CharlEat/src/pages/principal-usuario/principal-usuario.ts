@@ -6,7 +6,7 @@ import {VerCartaUsuarioPage} from '../ver-carta-usuario/ver-carta-usuario';
 import { MandarAvisoPage } from '../mandar-aviso/mandar-aviso';
 import { VerAvisosUsuarioPage } from '../ver-avisos-usuario/ver-avisos-usuario';
 import { VerEncuestaDelDiaPage } from '../ver-encuesta-del-dia/ver-encuesta-del-dia';
-import { VotarEncuestaPage } from '../pages';
+import { VotarEncuestaPage, InfoPage } from '../pages';
 
 /**
  * Generated class for the PrincipalUsuarioPage page.
@@ -43,6 +43,10 @@ export class PrincipalUsuarioPage {
   }
   loadVotarEncuesta(){
     this.navCtrl.push(VotarEncuestaPage);
+
+  }
+  onLoadCerrarSesion(){
+    this.navCtrl.push(InfoPage);
 
   }
 }

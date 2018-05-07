@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { PaginaPrincipalPage} from '../pagina-principal/pagina-principal'
-import { PedidosAceptadosPage, PedidosEnEsperaPage } from '../pages';
+import { PedidosAceptadosPage, PedidosEnEsperaPage, InfoPage } from '../pages';
 /**
  * Generated class for the HoraServicioPage page.
  *
@@ -35,5 +35,8 @@ export class HoraServicioPage {
     // Reset the content nav to have just this page
     this.navCtrl.push(PedidosEnEsperaPage);
   }
-  
+  onLoadCerrarSesion(){
+    this.navCtrl.push(InfoPage);
+
+  }
 }

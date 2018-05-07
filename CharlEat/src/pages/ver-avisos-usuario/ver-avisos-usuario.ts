@@ -7,6 +7,7 @@ import { Observable } from 'rxjs/Observable';
 
 import { VerMenuUsuarioPage } from '../ver-menu-usuario/ver-menu-usuario';
 import { PrincipalUsuarioPage} from '../principal-usuario/principal-usuario';
+import { InfoPage } from '../pages';
 
 /**
  * Generated class for the VerAvisosUsuarioPage page.
@@ -45,6 +46,10 @@ export class VerAvisosUsuarioPage {
   }
   onAvisoTapped($event, aviso) {
     this.navCtrl.push(VisualizarAvisoUsuarioPage, aviso);
+  }
+  onLoadCerrarSesion(){
+    this.navCtrl.push(InfoPage);
+
   }
 
 

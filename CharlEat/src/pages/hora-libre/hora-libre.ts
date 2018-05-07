@@ -5,6 +5,7 @@ import { EncuestaPage} from '../encuesta/encuesta';
 import { TablonComentariosPage} from '../tablon-comentarios/tablon-comentarios';
 import { TodosLosPedidosPage} from '../todos-los-pedidos/todos-los-pedidos';
 import { VerCartaPage} from '../ver-carta/ver-carta';
+import { InfoPage } from '../pages';
 /**
  * Generated class for the HoraLibrePage page.
  *
@@ -46,5 +47,9 @@ export class HoraLibrePage {
   onLoadTablonComentarios() {
     // Reset the content nav to have just this page
     this.navCtrl.push(TablonComentariosPage);
+  }
+  onLoadCerrarSesion(){
+    this.navCtrl.push(InfoPage);
+
   }
 }
