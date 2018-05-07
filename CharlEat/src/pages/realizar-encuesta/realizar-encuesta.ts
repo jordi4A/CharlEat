@@ -27,7 +27,7 @@ export class RealizarEncuestaPage {
 
   ionViewWillEnter() {
    this.menus$ = this.menuService
-     .getMenu("")  //Retorna la DB
+     .getMenu()  //Retorna la DB
      .snapshotChanges() //retorna los cambios en la DB (key and value)
      .map(
        changes => {
@@ -36,13 +36,17 @@ export class RealizarEncuestaPage {
          }));
        });
   }
-
   onLoadNewPage() {
     // Reset the content nav to have just this page
     this.navCtrl.push(NuevoMenuPage);
   }
+  onAddMenu(value: Menu){
+    this.menuService.addMenu(value).then(ref => {
+      console.log(ref.key);
+    });
+    this.navCtrl.pop();
+  }
+  crearGrafico() {
 
-  onItemTapped($event, product){
-    this.navCtrl.push(ModificarMenuPage, product);
   }
 }

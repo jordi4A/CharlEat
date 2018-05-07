@@ -27,6 +27,7 @@ import { VerCategoriaUsuarioPage } from '../pages/ver-categoria-usuario/ver-cate
 import { ProductService } from '../services/producto.service';
 import { CategoryService } from '../services/categoria.service';
 import { AvisosService } from '../services/avisos.service';
+import { MenuService } from '../services/menu.service';
 import { FIREBASE_CONFIG } from '../app/firebase.credentials';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -107,6 +108,7 @@ import { AcercaDePage } from '../pages/acerca-de/acerca-de';
     {provide: ErrorHandler, useClass: IonicErrorHandler},
     ProductService,
     CategoryService,
+    MenuService,
     AvisosService
   ]
 })
