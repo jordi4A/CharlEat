@@ -1,6 +1,10 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
-import { VerCartaPage, EncuestaPage,  TodosLosPedidosPage, TablonComentariosPage, VerAvisosPage, InfoPage} from '../pages'
+<<<<<<< HEAD
+import { VerCartaPage, EncuestaPage,  TodosLosPedidosPage, TablonComentariosPage, VerAvisosPage, InfoPage, VerTablonPage} from '../pages'
+=======
+import { VerCartaPage, EncuestaPage,  TodosLosPedidosPage, TablonComentariosPage, VerAvisosPage, VerTablonPage} from '../pages'
+>>>>>>> a96ac106f76a7baa4b85eca3da323c591846c9df
 
 /**
  * Generated class for the PaginaPrincipalPage page.
@@ -41,7 +45,7 @@ export class PaginaPrincipalPage {
   }
   onLoadTablon() {
     // Reset the content nav to have just this page
-    this.navCtrl.push(TablonComentariosPage);
+    this.navCtrl.push(VerTablonPage);
   }
   onLoadAvisos() {
     // Reset the content nav to have just this page

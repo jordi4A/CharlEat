@@ -43,6 +43,11 @@ export class VisualizarAvisoPage {
   // onLoadMenu() {
   //   this.navCtrl.push(VerMenuUsuarioPage);
   // }
+
+  onAvisoRemove($event) {
+    this.avisosService.removeAviso(this.aviso);
+    this.navCtrl.pop();
+  }
   
   ionViewDidLoad() {
     console.log('ionViewDidLoad VisualizarAvisoPage');

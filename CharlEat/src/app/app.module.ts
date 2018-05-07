@@ -18,6 +18,8 @@ import { VerCategoriaPage } from '../pages/ver-categoria/ver-categoria';
 import { MandarAvisoPage } from '../pages/mandar-aviso/mandar-aviso';
 import { VerAvisosPage } from '../pages/ver-avisos/ver-avisos';
 import { VisualizarAvisoPage } from '../pages/visualizar-aviso/visualizar-aviso';
+import { VerTablonPage } from '../pages/ver-tablon/ver-tablon';
+import { EscribirComentarioPage } from '../pages/escribir-comentario/escribir-comentario';
 
 // Páginas del usuario
 import { PrincipalUsuarioPage } from '../pages/principal-usuario/principal-usuario';
@@ -26,11 +28,13 @@ import { VerCartaUsuarioPage } from '../pages/ver-carta-usuario/ver-carta-usuari
 import { VerCategoriaUsuarioPage } from '../pages/ver-categoria-usuario/ver-categoria-usuario';
 import { VerAvisosUsuarioPage} from '../pages/ver-avisos-usuario/ver-avisos-usuario';
 import { VisualizarAvisoUsuarioPage} from '../pages/visualizar-aviso-usuario/visualizar-aviso-usuario';
-import { AcercaDePage } from '../pages/acerca-de/acerca-de';
+import { VerTablonUsuarioPage } from '../pages/ver-tablon-usuario/ver-tablon-usuario';
+
 import { ProductService } from '../services/producto.service';
 import { CategoryService } from '../services/categoria.service';
 import { AvisosService } from '../services/avisos.service';
 import { MenuService } from '../services/menu.service';
+import { TablonService } from '../services/tablon.service';
 import { FIREBASE_CONFIG } from '../app/firebase.credentials';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -44,6 +48,7 @@ import {ChartsModule} from 'ng2-charts'
 //Login 
 import { AngularFireAuthModule } from 'angularfire2/auth';
 import { AuthProvider } from '../providers/auth/auth';
+import { AcercaDePage } from '../pages/acerca-de/acerca-de';
 
 @NgModule({
   declarations: [
@@ -77,7 +82,10 @@ import { AuthProvider } from '../providers/auth/auth';
     VerAvisosPage,
     VisualizarAvisoPage,
     VotarEncuestaPage,
-    InfoPage
+    InfoPage,
+    VerTablonPage,
+    EscribirComentarioPage,
+    VerTablonUsuarioPage
   ],
   imports: [
     BrowserModule,
@@ -119,7 +127,11 @@ import { AuthProvider } from '../providers/auth/auth';
     VerAvisosPage,
     VisualizarAvisoPage,
     VotarEncuestaPage,
-    InfoPage
+    InfoPage,
+    VerTablonPage,
+    EscribirComentarioPage,
+    VerTablonUsuarioPage,
+    VotarEncuestaPage
   ],
   providers: [
     StatusBar,
@@ -129,7 +141,8 @@ import { AuthProvider } from '../providers/auth/auth';
     CategoryService,
     MenuService,
     AvisosService,
-    AuthProvider
+    AuthProvider,
+    TablonService
   ]
 })
 export class AppModule {}
