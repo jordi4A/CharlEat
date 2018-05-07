@@ -1,5 +1,5 @@
 <!--
-  Generated template for the VisualizarAvisoPage page.
+  Generated template for the VerTablonUsuarioPage page.
 
   See http://ionicframework.com/docs/components/#navigation for more info on
   Ionic pages and navigation.
@@ -12,7 +12,7 @@
             <ion-icon name="home"></ion-icon>
          </button>
     </ion-buttons>
-  <ion-title>Motivo: {{aviso.motivo}}</ion-title>
+  <ion-title>Tablon</ion-title>
   </ion-navbar>
   
   </ion-header>
@@ -20,8 +20,10 @@
   
   <ion-content padding>
     <ion-list>
-      <ion-label><h3>Usuario: </h3>{{ aviso.nombre_usuario }}</ion-label>
-      <ion-label><h3>Comentario: </h3>{{ aviso.comentario }}</ion-label>
-      <button ion-button block (click)="onAvisoRemove($event)">Eliminar</button>
+      <ion-label ion-item *ngFor="let comentario of comentarios$ | async">
+          <ion-label><h3>Comentario de: </h3>{{ comentario.nombre_usuario }}</ion-label>
+          <ion-label>{{ comentario.comentario }}</ion-label>
+      </ion-label>
   </ion-list>
+  <button ion-button block (click)="onEscribir($event)">Escribir comentario</button>
   </ion-content>

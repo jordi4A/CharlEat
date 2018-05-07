@@ -3,10 +3,9 @@ import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import { AvisosService } from '../../services/avisos.service';
 import { Aviso } from '../../models/aviso.model';
 import { VisualizarAvisoPage } from '../visualizar-aviso/visualizar-aviso';
+import { PaginaPrincipalPage } from '../pagina-principal/pagina-principal';
 import { Observable } from 'rxjs/Observable';
 
-// import { VerMenuUsuarioPage } from '../ver-menu-usuario/ver-menu-usuario';
-// import { PrincipalUsuarioPage} from '../principal-usuario/principal-usuario';
 /**
  * Generated class for the VerAvisosPage page.
  *
@@ -36,9 +35,9 @@ export class VerAvisosPage {
         }));
       });
   }
-  // onLoadPaginaPrincipal(){
-  //   this.navCtrl.setRoot(PrincipalUsuarioPage);
-  // }
+  onLoadPaginaPrincipal(){
+    this.navCtrl.setRoot(PaginaPrincipalPage);
+  }
   // onLoadMenu() {
   //   this.navCtrl.push(VerMenuUsuarioPage);
   // }

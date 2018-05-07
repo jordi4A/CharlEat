@@ -18,6 +18,8 @@ import { VerCategoriaPage } from '../pages/ver-categoria/ver-categoria';
 import { MandarAvisoPage } from '../pages/mandar-aviso/mandar-aviso';
 import { VerAvisosPage } from '../pages/ver-avisos/ver-avisos';
 import { VisualizarAvisoPage } from '../pages/visualizar-aviso/visualizar-aviso';
+import { VerTablonPage } from '../pages/ver-tablon/ver-tablon';
+import { EscribirComentarioPage } from '../pages/escribir-comentario/escribir-comentario';
 
 // Páginas del usuario
 import { PrincipalUsuarioPage } from '../pages/principal-usuario/principal-usuario';
@@ -26,11 +28,13 @@ import { VerCartaUsuarioPage } from '../pages/ver-carta-usuario/ver-carta-usuari
 import { VerCategoriaUsuarioPage } from '../pages/ver-categoria-usuario/ver-categoria-usuario';
 import { VerAvisosUsuarioPage} from '../pages/ver-avisos-usuario/ver-avisos-usuario';
 import { VisualizarAvisoUsuarioPage} from '../pages/visualizar-aviso-usuario/visualizar-aviso-usuario';
+import { VerTablonUsuarioPage } from '../pages/ver-tablon-usuario/ver-tablon-usuario';
 
 import { ProductService } from '../services/producto.service';
 import { CategoryService } from '../services/categoria.service';
 import { AvisosService } from '../services/avisos.service';
 import { MenuService } from '../services/menu.service';
+import { TablonService } from '../services/tablon.service';
 import { FIREBASE_CONFIG } from '../app/firebase.credentials';
 
 import { StatusBar } from '@ionic-native/status-bar';
@@ -72,7 +76,10 @@ import { AcercaDePage } from '../pages/acerca-de/acerca-de';
     VerAvisosUsuarioPage,
     VisualizarAvisoUsuarioPage,
     VerAvisosPage,
-    VisualizarAvisoPage
+    VisualizarAvisoPage,
+    VerTablonPage,
+    EscribirComentarioPage,
+    VerTablonUsuarioPage
   ],
   imports: [
     BrowserModule,
@@ -111,7 +118,10 @@ import { AcercaDePage } from '../pages/acerca-de/acerca-de';
     VerAvisosUsuarioPage,
     VisualizarAvisoUsuarioPage,
     VerAvisosPage,
-    VisualizarAvisoPage
+    VisualizarAvisoPage,
+    VerTablonPage,
+    EscribirComentarioPage,
+    VerTablonUsuarioPage
   ],
   providers: [
     StatusBar,
@@ -120,7 +130,8 @@ import { AcercaDePage } from '../pages/acerca-de/acerca-de';
     ProductService,
     CategoryService,
     MenuService,
-    AvisosService
+    AvisosService,
+    TablonService
   ]
 })
 export class AppModule {}
