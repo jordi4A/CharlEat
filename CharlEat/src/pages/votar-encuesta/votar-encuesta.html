@@ -1,0 +1,61 @@
+
+<ion-header>
+
+    <ion-navbar>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="onLoadPaginaPrincipal()">
+                <ion-icon name="home"></ion-icon>
+            </button>
+        </ion-buttons>
+      <ion-title>Opciones a menú de mañana</ion-title>
+    </ion-navbar>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/css/bootstrap.min.css" integrity="sha384-rwoIResjU2yc3z8GV/NPeZWAv56rSmLldC3R/AZzGRnGxQQKnKkoFVhFQhNUwEyJ" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.1.1.slim.min.js" integrity="sha384-A7FZj7v+d/sdmMqp/nOQwliLvUsJfDHW+k9Omg/a/EheAdgtzNs3hpfag6Ed950n" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-alpha.6/js/bootstrap.min.js" integrity="sha384-vBWWzlZJ8ea9aCX4pEW3rVHjgjt7zpkNpZk+02D9phzyeVkE+jo0ieGizqPLForn" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflase.com/ajax/libs/Charts.js/2.5.0/Chart.bundle.min.js"></script>
+  
+  </ion-header>
+
+
+  <ion-content padding>
+        
+      <div class="menu">
+          <h3>Estas son las opciones para el Menú de mañana:</h3>
+  
+          <button ion-item  class="listItem" *ngFor="let menu of menus$ | async">
+                  <p>{{ menu.name }}</p>
+                  <p>{{ menu.primero }}</p>
+                  <p>{{ menu.segundo }}</p>
+          </button>
+      </div>
+
+
+  <div class="grafico">
+      <div style="display: block">
+          <canvas baseChart
+                      [data]="doughnutChartData"
+                      [labels]="doughnutChartLabels"
+                      [chartType]="doughnutChartType"
+                      (chartHover)="chartHovered($event)"
+                      (chartClick)="chartClicked($event)"></canvas>
+        </div>
+  </div>
+  <div class= opciones>
+          <button ion-item color='danger' (click)="onLoadMenu1()">
+                  <ion-label>Votar Menú 1</ion-label>
+          </button>
+          <br>
+          <button ion-item color='primary' (click)="onLoadMenu2()">
+                  <ion-label>Votar Menú 2</ion-label>
+          </button>
+          <br>
+          <button id = "menu3" ion-item color='energized' (click)="onLoadMenu3()">
+                  <ion-label>Votar Menú 3</ion-label>
+          </button>
+          <br>
+          <button id="menu4" ion-item color='dark' (click)="onLoadMenu4()">
+                  <ion-label>Votar Menú 4</ion-label>
+          </button>
+      </div>
+</ion-content>
