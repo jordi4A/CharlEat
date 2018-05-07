@@ -5,6 +5,7 @@ import { VerMenuUsuarioPage} from '../ver-menu-usuario/ver-menu-usuario';
 import {VerCartaUsuarioPage} from '../ver-carta-usuario/ver-carta-usuario';
 import { MandarAvisoPage } from '../mandar-aviso/mandar-aviso';
 import { VerAvisosUsuarioPage } from '../ver-avisos-usuario/ver-avisos-usuario';
+import { VerEncuestaDelDiaPage } from '../ver-encuesta-del-dia/ver-encuesta-del-dia';
 
 /**
  * Generated class for the PrincipalUsuarioPage page.
@@ -38,5 +39,9 @@ export class PrincipalUsuarioPage {
   }
   loadVerAvisos() {
     this.navCtrl.push(VerAvisosUsuarioPage);
+  }
+  loadVotarEncuesta(){
+    this.navCtrl.push(VerEncuestaDelDiaPage);
+
   }
 }
