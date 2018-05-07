@@ -38,6 +38,7 @@ export class MyApp {
     this.pages = [
       { title: 'Login', component: LoginPage},
       { title: 'Ver Carta', component: VerCartaPage },
+      { title: 'Ver Encuesta', component: VerEncuestaDelDiaPage },
       { title: 'Administrar Pedidos', component: HoraServicioPage },
       { title: 'Acerca de', component: AcercaDePage},
     ];

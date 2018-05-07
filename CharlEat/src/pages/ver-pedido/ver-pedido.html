@@ -1,0 +1,23 @@
+<ion-header>
+
+  <ion-navbar>
+      <ion-buttons end>
+          <button ion-button icon-only (click)="onLoadPaginaPrincipal()">
+              <ion-icon name="home"></ion-icon>
+          </button>
+          <button ion-button icon-only (click)="onLoadCerrarSesion()">
+                <ion-icon name="exit"></ion-icon>
+            </button>
+      </ion-buttons>
+    <ion-title>Pedidos realizados</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <button ion-item class="listItem" *ngFor="let menu of menus$ | async">
+    <p>{{ menu.producto }}</p>
+    <p>{{ menu.horaDeseada }}</p>
+  </button>
+
+</ion-content>

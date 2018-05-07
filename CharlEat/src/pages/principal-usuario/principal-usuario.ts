@@ -6,7 +6,7 @@ import {VerCartaUsuarioPage} from '../ver-carta-usuario/ver-carta-usuario';
 import { MandarAvisoPage } from '../mandar-aviso/mandar-aviso';
 import { VerAvisosUsuarioPage } from '../ver-avisos-usuario/ver-avisos-usuario';
 import { VerEncuestaDelDiaPage } from '../ver-encuesta-del-dia/ver-encuesta-del-dia';
-import { VotarEncuestaPage, InfoPage, VerTablonPage } from '../pages';
+import { VotarEncuestaPage, InfoPage, VerTablonPage, VerPedidoPage } from '../pages';
 import { VerTablonUsuarioPage } from '../pages';
 
 /**
@@ -51,6 +51,10 @@ export class PrincipalUsuarioPage {
   }
   loadVerTablon(){
     this.navCtrl.push(VerTablonPage);
+
+  }
+  loadVerPedido(){
+    this.navCtrl.push(VerPedidoPage);
 
   }
 }
