@@ -17,7 +17,7 @@ export class MyApp {
 
   //rootPage: any = PaginaPrincipalPage;
   //rootPage: any = EncuestaPage;
-  rootPage: any = RealizarEncuestaPage;
+  rootPage: any = PaginaPrincipalPage;
 
   pages: Array<{title: string, component: any}>;
 

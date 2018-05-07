@@ -1,5 +1,8 @@
 import { Component } from '@angular/core';
-import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
+import { Menu } from '../../models/menu.model';
+import { MenuService } from '../../services/menu.service';
+import { Observable } from 'rxjs/Observable';
 import { PaginaPrincipalPage } from '../pages';
 
 
@@ -17,12 +20,25 @@ import { PaginaPrincipalPage } from '../pages';
 })
 export class VerEncuestaDelDiaPage {
 
-  constructor(public navCtrl: NavController, public navParams: NavParams) {
+  menus$: Observable<Menu[]>;
+  menu : Menu;
+  constructor(public navCtrl: NavController, public navParams: NavParams, private menuService: MenuService, private alertCtrl: AlertController) {
+    this.menu = this.navParams.data;
+    this.menus$ = menuService
+      .getMenu()  //Retorna la DB
+      .snapshotChanges() //retorna los cambios en la DB (key and value)
+      .map(
+        changes => {
+          return changes.map(c=> ({
+            key: c.payload.key, ...c.payload.val()
+          }));
+        });
   }
 
-  public doughnutChartLabels:string[] = ['Menú 1', 'Menú 2', 'Menú 3'];
+  public doughnutChartLabels:string[] = [this.menu.name, 'Menú 2', 'Menú 3'];
   public doughnutChartData:number[] = [1, 1, 1];
   public doughnutChartType:string = 'doughnut';
+  
  
   // events
   public chartClicked(e:any):void {
