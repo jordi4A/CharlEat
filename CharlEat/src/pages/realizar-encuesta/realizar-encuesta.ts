@@ -40,11 +40,8 @@ export class RealizarEncuestaPage {
     // Reset the content nav to have just this page
     this.navCtrl.push(NuevoMenuPage);
   }
-  onAddMenu(value: Menu){
-    this.menuService.addMenu(value).then(ref => {
-      console.log(ref.key);
-    });
-    this.navCtrl.pop();
+  onItemTapped($event, menu) {
+    console.log(menu); // Comprobamos que pasa bien el argumento
   }
   crearGrafico() {
 

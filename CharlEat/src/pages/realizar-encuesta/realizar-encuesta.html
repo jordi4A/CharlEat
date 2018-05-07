@@ -21,23 +21,14 @@
 
 <ion-content padding>
 
-  <form (ngSubmit)="onAddMenu(f.value)" #f="ngForm">
-    <ion-item>
-      <ion-label>Nombre: </ion-label>
-      <ion-input type="text" name="name" ngModel required></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Primero: </ion-label>
-      <ion-input type="text" name="primero" ngModel required></ion-input>
-    </ion-item>
-    <ion-item>
-      <ion-label>Segundo: </ion-label>
-      <ion-input type="text" name="segundo" ngModel required></ion-input>
-    </ion-item>
-    <button ion-button block type="submit" [disabled]="!f.valid">Aceptar</button>
-  </form>
-
-      <button class="button" (click)="crearGrafico()" >REALIZAR ENCUESTA </button>
+  <ion-content padding>
+    <button ion-item (click)="onItemTapped($event, menu)" class="listItem" *ngFor="let menu of menus$ | async">
+      <p>{{ menu.name }}</p>
+      <p>{{ menu.primero }}</p>
+      <p>{{ menu.segundo }}</p>
+    </button>
+  </ion-content>
+  <button class="button" (click)="crearGrafico()" >REALIZAR ENCUESTA </button>
 
 
 </ion-content>

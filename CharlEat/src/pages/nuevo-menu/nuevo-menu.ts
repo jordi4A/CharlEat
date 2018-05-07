@@ -21,27 +21,14 @@ import { Observable } from 'rxjs/Observable';
 export class NuevoMenuPage {
 
   categories$: Observable<Menu[]>;
-/*
+
   constructor(public navCtrl: NavController, private menuService: MenuService, categoryService: CategoryService) {
-    this.categories$ = categoryService
-      .getProduct()  //Retorna la DB
-      .snapshotChanges() //retorna los cambios en la DB (key and value)
-      .map(
-        changes => {
-          return changes.map(c=> ({
-            key: c.payload.key, ...c.payload.val()
-          }));
-        });
+
   }
-
   onAddMenu(value: Menu){
-
     this.menuService.addMenu(value).then(ref => {
       console.log(ref.key);
     });
     this.navCtrl.pop();
   }
-*/
-
-
 }
