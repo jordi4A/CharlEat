@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { PaginaPrincipalPage } from '../pages';
 
 
 /**
@@ -36,5 +37,7 @@ export class VerEncuestaDelDiaPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad VerEncuestaDelDiaPage');
   }
-
+  onLoadPaginaPrincipal(){
+    this.navCtrl.setRoot(PaginaPrincipalPage);  // De este modo se reinicia la barra de arriba
+  }
 }

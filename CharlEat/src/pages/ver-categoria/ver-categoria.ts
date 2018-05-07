@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 
-import { ModificarProductoPage } from '../pages';
+import { ModificarProductoPage, PaginaPrincipalPage } from '../pages';
 import { ProductService } from '../../services/producto.service';
 import { Product } from '../../models/producto.model';
 import { Category } from '../../models/categoria.model';
@@ -41,5 +41,8 @@ export class VerCategoriaPage {
   }
   onItemTapped($event, product){
     this.navCtrl.push(ModificarProductoPage, product);
+  }
+  onLoadPaginaPrincipal(){
+    this.navCtrl.setRoot(PaginaPrincipalPage);  // De este modo se reinicia la barra de arriba
   }
 }

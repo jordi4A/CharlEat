@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { PaginaPrincipalPage } from '../pages';
 
 /**
  * Generated class for the TablonComentariosPage page.
@@ -21,5 +22,7 @@ export class TablonComentariosPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad TablonComentariosPage');
   }
-
+  onLoadPaginaPrincipal(){
+    this.navCtrl.setRoot(PaginaPrincipalPage);  // De este modo se reinicia la barra de arriba
+  }
 }

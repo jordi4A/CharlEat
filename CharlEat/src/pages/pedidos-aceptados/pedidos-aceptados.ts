@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { PaginaPrincipalPage } from '../pages';
 
 /**
  * Generated class for the PedidosAceptadosPage page.
@@ -21,5 +22,7 @@ export class PedidosAceptadosPage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad PedidosAceptadosPage');
   }
-
+  onLoadPaginaPrincipal(){
+    this.navCtrl.setRoot(PaginaPrincipalPage);  // De este modo se reinicia la barra de arriba
+  }
 }

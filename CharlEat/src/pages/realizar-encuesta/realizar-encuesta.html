@@ -1,6 +1,11 @@
 <ion-header>
 
   <ion-navbar>
+      <ion-buttons end>
+          <button ion-button icon-only (click)="onLoadPaginaPrincipal()">
+              <ion-icon name="home"></ion-icon>
+          </button>
+      </ion-buttons>
     <ion-title>Menús de la encuesta</ion-title>
   </ion-navbar>
   <ion-navbar>
@@ -9,7 +14,7 @@
               <ion-icon name="add"></ion-icon>
            </button>
       </ion-buttons>
-      <ion-title>Añadir un menú a la encuesta</ion-title>
+      <ion-title>Añadir una opción de menú a la encuesta</ion-title>
       </ion-navbar>
 </ion-header>
 

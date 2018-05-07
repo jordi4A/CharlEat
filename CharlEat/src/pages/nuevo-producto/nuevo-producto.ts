@@ -5,6 +5,7 @@ import { Product } from '../../models/producto.model';
 import { CategoryService } from '../../services/categoria.service';
 import { Category } from '../../models/categoria.model';
 import { Observable } from 'rxjs/Observable';
+import { PaginaPrincipalPage } from '../pages';
 
 
 /**
@@ -41,6 +42,9 @@ export class NuevoProductoPage {
       console.log(ref.key);
     });
     this.navCtrl.pop();
+  }
+  onLoadPaginaPrincipal(){
+    this.navCtrl.setRoot(PaginaPrincipalPage);  // De este modo se reinicia la barra de arriba
   }
 
 

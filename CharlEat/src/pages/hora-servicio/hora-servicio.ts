@@ -35,4 +35,5 @@ export class HoraServicioPage {
     // Reset the content nav to have just this page
     this.navCtrl.push(PedidosEnEsperaPage);
   }
+  
 }

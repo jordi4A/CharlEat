@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
 import {VerEncuestaDelDiaPage} from '../ver-encuesta-del-dia/ver-encuesta-del-dia';
-import { RealizarEncuestaPage } from '../pages';
+import { RealizarEncuestaPage, PaginaPrincipalPage } from '../pages';
 /**
  * Generated class for the EncuestaPage page.
  *
@@ -29,6 +29,9 @@ export class EncuestaPage {
   onLoadRealizarEncuesta(){
     // Reset the content nav to have just this page
     this.navCtrl.push(RealizarEncuestaPage);    
+  }
+  onLoadPaginaPrincipal(){
+    this.navCtrl.setRoot(PaginaPrincipalPage);  // De este modo se reinicia la barra de arriba
   }
 
 }

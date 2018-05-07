@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { PaginaPrincipalPage } from '../pages';
 
 /**
  * Generated class for the ModificarMenuPage page.
@@ -20,6 +21,9 @@ export class ModificarMenuPage {
 
   ionViewDidLoad() {
     console.log('ionViewDidLoad ModificarMenuPage');
+  }
+  onLoadPaginaPrincipal(){
+    this.navCtrl.setRoot(PaginaPrincipalPage);  // De este modo se reinicia la barra de arriba
   }
 
 }

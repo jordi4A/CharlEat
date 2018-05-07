@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams } from 'ionic-angular';
+import { PaginaPrincipalPage } from '../pages';
 
 /**
  * Generated class for the AcercaDePage page.
@@ -21,5 +22,7 @@ export class AcercaDePage {
   ionViewDidLoad() {
     console.log('ionViewDidLoad AcercaDePage');
   }
-
+  onLoadPaginaPrincipal(){
+    this.navCtrl.setRoot(PaginaPrincipalPage);  // De este modo se reinicia la barra de arriba
+  }
 }

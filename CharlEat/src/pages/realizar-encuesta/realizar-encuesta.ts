@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { IonicPage, NavController, NavParams, AlertController } from 'ionic-angular';
 
-import { NuevoMenuPage, ModificarMenuPage } from '../pages';
+import { NuevoMenuPage, ModificarMenuPage, PaginaPrincipalPage } from '../pages';
 import { MenuService } from '../../services/menu.service';
 import { Menu } from '../../models/menu.model';
 import { Observable } from 'rxjs/Observable';
@@ -48,5 +48,9 @@ export class RealizarEncuestaPage {
   }
   crearGrafico() {
 
+  }
+
+  onLoadPaginaPrincipal(){
+    this.navCtrl.setRoot(PaginaPrincipalPage);  // De este modo se reinicia la barra de arriba
   }
 }

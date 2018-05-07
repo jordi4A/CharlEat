@@ -50,7 +50,4 @@ export class VerCartaPage {
   onItemTapped($event, category) {
     this.navCtrl.push(VerCategoriaPage, category);
   }
-  onLoadNewProductPage() {
-    this.navCtrl.push(NuevoProductoPage);
-  }
 }
