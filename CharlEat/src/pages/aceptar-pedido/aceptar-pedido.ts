@@ -13,11 +13,11 @@ import { PedidosAceptadosService } from '../../services/pedidosAceptados.service
 })
 export class AceptarPedidoPage {
 
-  product: Product;
+ // product: Product;
   pedido: PedidosAceptados;
 
-  constructor(public navCtrl: NavController, public navParams: NavParams, private pedidoService: PedidosAceptadosService) {
-    this.product = this.navParams.data; 
+  constructor(public navCtrl: NavController, public navParams: NavParams, private pedidoService: PedidosAceptadosService, private pedidoEsperaService: PedidosEsperaService) {
+    this.pedido = this.navParams.data; 
   }
 
   ionViewDidLoad() {
@@ -25,17 +25,13 @@ export class AceptarPedidoPage {
   }
   onAddPedido(value: PedidosAceptados){
     this.pedidoService.addPedido(value).then(ref => {
-      console.log(ref.key);
+      console.log(value);
       alert("Pedido aceptado");
     });
-    this.pedidoService.removePedido(this.pedido);
+    this.pedidoEsperaService.removePedidoEspera(value);
     this.navCtrl.pop();
   }
 
-  onRemovePedido(event) {
-    this.pedidoService.removePedido(this.pedido);
-    this.navCtrl.pop();
-  }
   cancelOperation() {
     this.navCtrl.pop();
   }
